@@ -1,0 +1,290 @@
+# Opdracht 7 - Het opzetten, configureren en testen van een eenvoudig netwerk in Packet Tracer
+
+In deze opdracht zal je een compleet IPv4- en IPv6-netwerk opzetten met PC's, switches en een router in Cisco [Packet Tracer](https://www.netacad.com/courses/packet-tracer).
+
+De instructies in deze opdracht zijn wat bondiger. Je zal beroep moeten doen op de kennis en ervaring die je hebt opgedaan in het OLOD Computer Networks I.
+
+## :mortar_board: Leerdoelen
+
+- Je kan een correct adresseringsschema opstellen voor IPv4 en IPv6.
+- Je kan een gesimuleerd netwerk opzetten in Cisco Packet Tracer.
+- Je kan een router, switch en computer correct instellen en zo het gesimuleerd netwerk functioneel maken.
+- Je kan een SSH-verbinding opzetten naar een router of switch.
+
+## :bar_chart: Evaluatiecriteria
+
+Toon na afwerken het resultaat aan je begeleider. Elk teamlid moet in staat zijn om het resultaat te demonstreren bij de oplevering van deze opdracht! Criteria voor beoordeling:
+
+- [ ] Je hebt een correct adresseringsschema voor IPv4 uitgewerkt en kan dit toelichten.
+- [ ] Je hebt een correct adresseringsschema voor IPv6 uitgewerkt en kan dit toelichten.
+- [ ] PC1 kan pingen naar R1, R2, PC3 en PC4 over IPv4.
+- [ ] PC1 kan pingen naar PC4 over IPv6.
+- [ ] De begeleider selecteert willekeurig een van de routers. Je kan hierop het volgende demonstreren:
+  - [ ] Je kan inloggen via de consolekabel.
+  - [ ] Er is een wachtwoord ingesteld voor console en privileged EXEC mode.
+  - [ ] Er is een MOTD ingesteld.
+  - [ ] Wachtwoorden staan geëncrypteerd in de running config.
+  - [ ] Er zijn geen ongewenste DNS lookups.
+  - [ ] De startup config is weggeschreven.
+  - [ ] Je kan via IPv4 pingen naar elke PC.
+- [ ] Je kan vanuit PC1 een SSH-verbinding openen naar R1 en R2 via IPv4.
+- [ ] Er is een verslag gemaakt op basis van de template.
+- [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
+- [ ] Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een :question:.
+
+> Opmerking voor studenten TIAO: elk teamlid toont een deel van de evaluatiecriteria, eventueel op een ander toestel.
+
+## Probleemstelling
+
+Een bedrijf of organisatie kan tegenwoordig niet meer functioneren zonder een netwerk. Een netwerk gebruikt **switches** om toestellen met elkaar te verbinden en **routers** om netwerken met elkaar te verbinden. In onze simulatie willen we graag twee subnetten opstellen en deze met elkaar verbinden volgens de **topologie** zoals weergegeven in onderstaande figuur.
+
+![Overzicht netwerk](./img/cisco/netwerk1.png)
+
+## :memo: Opdracht
+
+### Stap 1 - Topologie
+
+- Zorg ervoor dat je de laatste versie van Packet Tracer geïnstalleerd hebt (<https://www.netacad.com/resources/lab-downloads?courseLang=en-US>).
+- Bouw in Packet Tracer een netwerk zoals op bovenstaand schema.
+
+  - Dit netwerk heeft **drie subnetten**:
+
+    - Subnet 0: hosts PC1 en PC2, switch SW1, interface G0/0/0 van R1.
+    - Subnet 1: interface G0/0/1 van R1, interface G0/0/0 van R2
+    - Subnet 2: hosts PC3 en PC4, switch SW2, interface G0/0/1 van R2
+
+  - De routers zijn van het type **4331 Cisco router**.
+  - De switches zijn van het type **2960 Cisco switch**.
+
+- Verbind de toestellen met de juiste kabels.
+- Je zal de computers PC1 en PC3 gebruiken om in te loggen op de routers, en deze vervolgens te configureren. Verbind dus de volgende toestellen met behulp van **consolekabels**:
+  - PC1 met router R1
+  - PC3 met router R2
+  
+### Stap 2 - Bijwerken software op router
+
+Sommige commando's in de volgende stappen werken alleen als de softwareversie op jouw router 15 of hoger is. Je kan dit controleren met het commando `show version`.
+
+Is de versie lager dan 15? Bekijk dan de onderstaande video's om te leren hoe je in Cisco Packet Tracer de firmware van de apparaten kan upgraden met behulp van de ingebouwde TFTP-server. Voer de instructies afzonderlijk uit op elk apparaat totdat alle routers en switches minimaal versie 15 hebben. Mogelijk hoef je de video's niet exact te volgen, maar ze bieden een goede leidraad.
+
+- <https://www.youtube.com/watch?v=Q-N6uu2-560>
+- <https://www.youtube.com/watch?v=XnHUyE-5lhg>
+
+### Stap 3 - Basisconfiguratie van de routers
+
+- Configureer elke router als volgt:
+
+  - Maak verbinding met de router via de consolekabel.
+  - Geef de router een naam volgens de opgegeven topologie.
+  - Voorkom ongewenste DNS lookups.
+  - Stel wachtwoorden in voor de priviliged EXEC mode en de toegang via de consolepoort.
+  - Zorg ervoor dat wachtwoorden geëncrypteerd zijn in de configuratie.
+  - Stel de volgende MOTD (= Message Of The Day) banner in: `Toegang enkel voor leden van groep ... (vul hier je eigen groepsnummer in)`.
+
+- Bewaar de configuratie zodat deze niet verloren raakt bij een `reload` en test dit uit.
+- :question: Hoe toon je de huidige configuratie?
+- :question: Hoe toon je de IOS-versie?
+
+### Stap 4 - IPv4
+
+#### Stap 4.1 - Opstellen van het IPv4 adresseringsschema
+
+> :warning: **Let op:** Je gebruikt dezelfde adresseringsschema's binnen jouw groep. Dat maakt het bv. eenvoudiger om elkaars problemen op te sporen, enz.
+
+- Bepaal het te subnetten netwerk en dus het **netwerkadres** a.d.h.v.:
+
+  - IPv4-adres = 20.26.`groepsnummer`.0
+  - prefixlengte = 17 + `groepsnummer` % 6 (dus bij groep 80 zal dit 19 zijn, want de rest van 80 gedeeld door 6 is 2)
+
+- Verdeel dit netwerk in 4 subnetten van **gelijke grootte**.
+- Geef voor elk subnet (Vergeet dit niet op te nemen in het verslag!):
+  - het netwerkadres
+  - het broadcastadres
+  - het subnetmask
+  - het maximum aantal uitdeelbare hostadressen.
+- Vul onderstaande tabel aan. Je mag zelf de IPv4-adressen kiezen waar mogelijk.
+
+| **Toestel** | **Interface** | **Subnetnr.** | **IPv4-adres** | **Subnetmask** | **IPv4-adres default gateway** |
+| ----------- | ------------- | ------------- | -------------- | -------------- | ------------------------------ |
+| PC1         | NIC           |               |                |                |                                |
+| PC2         | NIC           |               |                |                |                                |
+| PC3         | NIC           |               |                |                |                                |
+| PC4         | NIC           |               |                |                |                                |
+| R1          | G0/0/0        |               |                |                | n.v.t.                         |
+| R1          | G0/0/1        |               |                |                | n.v.t.                         |
+| R2          | G0/0/0        |               |                |                | n.v.t.                         |
+| R2          | G0/0/1        |               |                |                | n.v.t.                         |
+
+#### Stap 4.2 - Configuratie van de router
+
+- Configureer elke interface met:
+  - Het correcte IPv4-adres.
+  - Een beschrijving van het subnet waarmee de interface verbonden is:
+    - `LAN to SW1`
+    - `LAN to SW2`
+    - `Router LAN`
+- Stel de 'gateway of last resort' correct in
+- Bewaar de configuratie
+
+#### Stap 4.3 - Configuratie van de PC's
+
+- Stel voor elke PC het statisch IPv4-adres, het subnetmask en de default gateway in.
+
+#### Stap 4.4 - Testen van de verbindingen
+
+Duidt in de volgende tabel aan met `ja` of `nee` of je kan pingen tussen de toestellen:
+
+| **Van/naar** | **PC1** | **PC2** | **R1** | **R2** |**PC3**  | **PC4** |
+| ------------ | ------- | ------- | ------ | ------ | ------- | ------- |
+| PC1          | n.v.t.  |         |        |        |         |         |
+| PC2          |         | n.v.t.  |        |        |         |         |
+| R1           |         |         |  n.v.t |        |         |         |
+| R2           |         |         |        |  n.v.t |         |         |
+| PC3          |         |         |        |        | n.v.t.  |         |
+| PC4          |         |         |        |        |         | n.v.t.  |
+
+- :question: Waarvoor dient de gateway of last resort in de routeringstabel van een router?
+- :question: Waarom geeft de eerste ping soms een `Request timed out` foutmelding terwijl de volgende drie wel lukken?
+
+### **Stap 5 - IPv6**
+
+#### Stap 5.1 - Opstellen van het IPv6 adresseringsschema
+
+Er bestaan verschillende types IPv6-adressen zoals link-local adressen (LLA's), global unicast adressen (GUA's). We moeten minstens die twee types configureren op onze interfaces.
+
+- :question:Wat is het verschil tussen een LLA en een GUA en wat is hun functie?
+
+#### Toekenning van link-local adressen (LLAs)
+
+- De PC's hebben zelf al een link-local adres gegenereerd van zodra IPv6 geactiveerd werd.
+  - :question:Welk proces wordt er in Packet Tracer gebruikt om de interface ID van dit link-local adres te genereren en toon aan hoe je dit kan zien?
+- Voor de interfaces van de routers gebruik je waar mogelijk FE80::1, en waar dit niet kan FE80::2.
+  - :question:Op welke interfaces heb je FE80::2 ingesteld?.
+  - :question:Verklaar waarom je aan beide interfaces op R1 hetzelfde link-local adres kan toekennen.
+
+#### Toekenning van global unicast adressen (GUAs)
+
+Een IPv6-adres bestaat uit 3 delen:
+
+![IPv6 adres opbouw](<img/cisco/IPv6 Packet.png>)
+
+Om de IPv6 adressen van de toestellen te bepalen gaan we als volgt te werk:
+
+**a) Global Routing Prefix (48 bits of 3 hextetten)**
+
+- Gebruik voor de 2 eerste hextetten:  
+  `2001:db8:`
+
+  > Deze GUA adresrange mag enkel gebruikt worden voor documentatie, voorbeelden en simulaties zoals Packet Tracer. (zie RFC3849)
+  >
+  > Indien je met fysieke aparatuur werkt, gebruik je de global prefix die je ISP je toekent (Bekijk zeker eens thuis welke IPv6 prefix je krijgt van je ISP).  
+  > Als je geen IPv6 adres krijgt (zoals op het HOGENT netwerk) kan je gebruik maken van ULA's.
+  >
+  > - :question: Wat is het verschil tussen ULA's en GUA's?
+  > - :question: Met welke types IPv4-adressen kan je deze 2 soorten IPv6-adressen vergelijken?
+
+- Genereer voor het 3e hextet een random hexadecimaal getal bestaande uit 4 cijfers via <https://www.browserling.com/tools/random-hex>
+
+**b) Subnet ID (16 bits of 1 hextet)**
+
+- Het 4e hextet wordt gebruikt voor het aanmaken van subnetten.
+  - :question:Hoeveel subnetten kunnen we dus maken?
+  - :question:Hoeveel hosts kan elk van die subnetten bevatten? (Vergelijk dit aantal nu eens met het totale aantal IPv4-adressen.)
+- Je mag je subnet-ID vrij kiezen, maar maak het jezelf zo eenvoudig mogelijk.
+
+**c) Interface ID (64 bits of 4 hextetten)**
+
+- De laatste 4 hextetten vormen de interface-ID. Het identificatienummer van je NIC binnen het subnet.
+- Je mag de interface-IDs voor de routers zelf kiezen, maar maak het jezelf ook hier niet nodeloos moeilijk.
+- De adressen van de PC's laten we hen zelf aanmaken. Dit is 1 van de troeven van IPv6.
+
+  - :question:Hoe heet het proces waarbij een host eigenhandig zijn GUA samenstelt zonder tussenkomst van een DHCP-server?
+
+- Vul onderstaande tabel aan met de IPv6 adressen van de routers. De adressen van de PC's vul je straks aan met de adressen die ze voor zichzelf hebben gecreëerd.
+
+| **Toestel** | **Interface** | **Subnet** | **IPv6-adres (GUA)** | **IPv6-adres (LLA)** | **IPv6-prefixlengte** | **IPv6-adres default gateway** |
+| ----------- | ------------- | ---------- | -------------------- | -------------------- | --------------------- | ------------------------------ |
+| PC1         | NIC           |            |                      |                      | /64                   |                                |
+| PC2         | NIC           |            |                      |                      | /64                   |                                |
+| PC3         | NIC           |            |                      |                      | /64                   |                                |
+| PC4         | NIC           |            |                      |                      | /64                   |                                |
+| R1          | G0/0/0        |            |                      |                      | /64                   | n.v.t.                         |
+| R1          | G0/0/1        |            |                      |                      | /64                   | n.v.t.                         |
+| R2          | G0/0/0        |            |                      |                      | /64                   | n.v.t.                         |
+| R2          | G0/0/1        |            |                      |                      | /64                   | n.v.t.                         |
+
+#### Stap 5.2 - Activeer IPv6 op de routers
+
+IPv6 ondersteuning staat standaard niet aan op de Cisco apparatuur en moet dus eerst geactiveerd worden.
+
+- Doe dit op de routers met het commando
+
+```cisco
+Router(config)#ipv6 unicast-routing
+```
+
+#### Stap 5.3 - Configureer de router
+
+- Stel voor elke interface van de router het correcte LLA- en GUA-adres in.
+- Stel een statische route in zodat de PC's uit subnet 0 ook de PC's uit subnet 2 kunnen bereiken.
+
+#### Stap 5.4 - Configureer de PC's
+
+We laten de PC's zichzelf een adres toewijzen. Zet hiervoor de IPv6 configuratie op `Auto` en als alles goed is geconfigureerd zie je automatisch een IPv6 adres verschijnen. Ook de default gateway wordt automatisch ingevuld.
+
+:question: Is dit een LLA of een GUA?
+
+Vul deze adressen in, in de IPv6-tabel uit **stap 5.1**
+
+**Je hebt met IPv6 dus geen administrator of DHCP nodig om je PC's met elkaar te laten communiceren.**
+
+- :question:Welke instelling missen we wel nog om te kunnen surfen op het World Wide Web?
+
+#### Stap 5.5 - Testen van de verbindingen
+
+Duidt in de volgende tabel aan met `ja` of `nee` of je kan pingen tussen de toestellen. Ditmaal uiteraard met de IPv6-adressen.
+
+| **Van/naar** | **PC1** | **PC2** |**R1** | **R2** |**PC3** | **PC4** |
+| ------------ | ------- | ------- |-----  | ------ |------- | ------- |
+| PC1          | n.v.t.  |         |       |        |        |         |
+| PC2          |         | n.v.t.  |       |        |        |         |
+| R1           |         |         | n.v.t |        |        |         |
+| R2           |         |         |       | n.v.t. |        |         |
+| PC3          |         |         |       |        |n.v.t.  |         |
+| PC4          |         |         |       |        |        | n.v.t.  |
+
+### Stap 6 - De routeringstabel
+
+- :question:Hoe toon je de **routeringstabel** op een Cisco router?
+  - :question:Hoeveel routes zijn aangeduid met `C`? Wat betekent dit?
+  - :question:Hoeveel routes zijn aangeduid met `L`? Wat betekent dit?
+  - :question:Hoe kan je de IP-adressen van de interfaces zien (IPv4 en IPv6) en welke interfaces up of down zijn?
+  - :question:Hoe kan je de MAC-adressen terugvinden van de interfaces?
+
+### Stap 7 - Instellen SSH-toegang
+
+Configureer de router als volgt:
+
+- Stel het domein `selabs.local` in voor het toestel.
+- Genereer een 2048 bits RSA-sleutelpaar.
+- Zorg ervoor dat SSH versie 2 wordt gebruikt.
+- Configureer een lokale gebruiker voor SSH.
+- Activeer SSH op de VTY lines, maar geen telnet
+  - :question: Waarom schakelen we telnet uit?
+- Configureer de login methode zodat de credentials van de lokale gebruiker opgevraagd worden bij het tot stand brengen van een SSH-verbinding.
+- Bewaar de configuratie zodat deze niet verloren raakt bij een `reload` van het toestel.
+- Test uit of je met elk toestel een SSH-verbinding tot stand kan brengen. Gebruik het SSH-commando (bv. `ssh -l admin 192.168.1.1`). Duid in de volgende tabel aan met `ja` of `nee` of de SSH-verbinding tussen de toestellen lukt:
+
+| **Van/naar** |       **R1**   | **R2**          |
+|---|---|---
+| PC1          |                |                 |
+| PC3          |                |                 |
+
+- :question:Werkt SSH ook met IPv6?
+  - Tip: voer een `reload` uit op R1 en R2 alvorens dit te testen
+- :question:Wat is de "SSH timeout" en "maximum authentication retries". Hoe stel ik deze in op 60 seconden en 4 retries?
+
+### Stap 8 - Reflectie
+
+- Welke subnetting (IPv4 of IPv6) was voor jou het eenvoudigst uit te voeren? Waarom?
+- Wat was voor jou de moeilijkste stap van de gehele opdracht?
