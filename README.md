@@ -11,7 +11,7 @@ Lijst alle teamleden op met hun GitHub gebruikersnaam:
 | Name      | GitHub username                         |
 | :-------- | :-------------------------------------- |
 | Student 1 | [Jonas De Reuse](https://github.com/JonasDeReuse) |
-| Student 2 | [username](https://github.com/DeyssiVedzijeva) |
+| Student 2 | [Deyssi Vedzijeva](https://github.com/DeyssiV) |
 | Student 3 | [username](https://github.com/username) |
 | Student 4 | [username](https://github.com/username) |
 | Student 5 | [username](https://github.com/username) |
