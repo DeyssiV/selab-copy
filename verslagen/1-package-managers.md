@@ -1,6 +1,6 @@
 # Verslag: Opdracht 1 - Package Manager & Markdown
 
-> Naam verslaggever: VOORNAAM FAMILIENAAM
+> Naam verslaggever: Deyssi Vedzijeva
 
 ## Beschrijving
 
@@ -33,26 +33,29 @@ In /Users/steven/Documents/SysEngLab/installatie.sh
 
 ## Problemen en oplossingen
 
-Beschrijf hieronder eventuele problemen die jullie zijn tegengekomen tijdens het uitvoeren van de opdracht, met een korte beschrijving van wat er mis ging en hoe jullie het hebben opgelost (als het jullie gelukt is om het op te lossen). Als het niet gelukt is om het op te lossen, beschrijf dan hoe ver jullie zijn gekomen en wat jullie tegenhield om verder te gaan. Voeg eventuele foutmeldingen, screenshots, enz. toe.
-
-Als jullie geen problemen zijn tegengekomen, schrijf dan "geen problemen ondervonden".
-
 ### Probleem 1 - Korte beschrijving van het probleem
 
-Beschrijf hier het probleem uitgebreid met screenshots, code snippets, enz. en de oplossing die jullie al dan niet hebben gevonden.
+Bij het installeren van virtualbox op MacOs (silicon processor) kreeg ik telkens het fout. Ik ben ervan uitgegeaan dat het eraan lag dat virtualbox niet compatibel ermee is (bij OS moest ik ook ipv virtualbox UTM downloaden en gebruiken), hierdoor heb ik ook de 'pin'functie niet kunnen gebruiken.
+![installatie-probleem]
+
 
 ## Voorbereiding demo
 
-Beschrijf hier hoe je elk evaluatiecriterium zal demonstreren. Geef ook aan welke bestanden, commando's, enz. je zal gebruiken tijdens de demo.
+Om duidelijk te laten zien dat we opdracht 1 succesvol hebben kunnen afronden, kunnen we dit stap voor stap reconstrueren. Eerst laten we elk zien (aangezien we verschillende OS'en hebben) dat de package manager op ons systeem staat. Hierna kunnen we eventueel een script schrijven om applicaties te installeren via Brew, of het bestaande scriptbestand tonen; meer specifiek het installatie.sh bestand dat we moesten maken voor opdracht 1. Hierbij laten we ook duidelijk zien dat we de package manager vlot kunnen gebruiken.
+
+Om de gebruikte commando's zeker niet te vergeten, hebben we deze elk in onze eigen cheat sheet gezet. In deze opdracht hebben we voornamelijk de commando's brew install en brew pin gebruikt, omdat er enkel verwacht werd dat we apps zouden downloaden via de terminal/PowerShell. Om ook vlot met elkaar te communiceren als groep, werd er een GitHub-repo gemaakt waarin dit verslagdocument werd gedeeld en waarheen telkens bepaalde wijzigingen werden gecommit.
 
 ## Reflecties
 
-Maak werk van een degelijke reflectie over de opdracht.
+In het algemeen was de opdracht niet veel te ingewikkeld. Het vergde wat tijd en opzoekwerk maar was zeker doenbaar. Om de uitbreiding van opdracht 1 te maken moest er wel nog extra opzoekwerk gedaan worden over hoe je user input kon gebruiken om een bepaalde commando uit te voeren. 
 
 Wat was moeilijk? Wat was eenvoudig? Wat hebben jullie geleerd van de opdracht? Wat zouden jullie anders doen als jullie het opnieuw moesten doen?
 
-Als jullie nog andere opmerkingen hebben over de opdracht hebben, voel je vrij om ze te delen.
 
 ## Bronnen
+PWS Academy. (2022 10 februari). Using Homebrew to install and manage software on macOS
 
-Maak een lijst van alle bronnen die jullie hebben gebruikt tijdens het uitvoeren van de opdracht: boeken, handleidingen, HOWTO's, blog posts, enz. Citeer geen bronnen zoals ChatGPT of andere AI-tools rechtstreeks. Als je AI hebt gebruikt, laat het je dan leiden naar echte, betrouwbare bronnen in plaats daarvan.
+W3Schools. (z.d.). Bash conditions. Geraadpleegd op 23 februari 2026, van https://www.w3schools.com/bash/bash_conditions.php
+
+Ryan’s Tutorials. (z.d.). Bash input. Geraadpleegd op DD MM YYYY, van https://ryanstutorials.net/bash-scripting-tutorial/bash-input.php
+
