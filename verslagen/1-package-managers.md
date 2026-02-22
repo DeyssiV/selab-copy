@@ -36,7 +36,7 @@ In /Users/steven/Documents/SysEngLab/installatie.sh
 ### Probleem 1 - Korte beschrijving van het probleem
 
 Bij het installeren van VirtualBox op macOS (Apple Silicon/M-chip) liep ik telkens tegen een foutmelding aan. Ik ben ervan uitgegaan dat dit kwam doordat VirtualBox niet volledig compatibel is met deze architectuur. Voor het vak Operating Systems (OS) moest ik om die reden ook UTM downloaden en gebruiken in plaats van VirtualBox. Hierdoor heb ik voor VirtualBox ook de 'pin'-functie niet kunnen testen.
-![installatie-probleem](./)
+![installatie-probleem](./error-vb-sel.png)
 
 
 ## Voorbereiding demo
