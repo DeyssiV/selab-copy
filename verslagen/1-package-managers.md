@@ -14,7 +14,7 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 
 ### Vraag 2 - In welke directory heb jij het script bewaard?
 
-(MacOS) In /Users/deyssi/Desktop/MT SEM II/SEL SEM2
+(MacOS) In /Users/deyssi/Desktop/MT SEM II/SEL SEM2/installatie.sh
 
 ### Vraag 3 - In welke directory is het script bewaard uit het screenshot onder stap 6?
 
@@ -25,17 +25,18 @@ In /Users/steven/Documents/SysEngLab/installatie.sh
 
 - [x] Je hebt een package manager voor jouw besturingssysteem geïnstalleerd.
 - [x]  Je hebt een script (PowerShell of Bash, afhankelijk van je besturingssysteem) geschreven en gebruikt om de opgesomde applicaties te installeren.
-- [ ]  Je toont inzicht in de werking van een package manager en kan deze vlot kan gebruiken om basistaken uit te voeren.
+- [x]  Je toont inzicht in de werking van een package manager en kan deze vlot kan gebruiken om basistaken uit te voeren.
 - [x]  Er is een verslag gemaakt op basis van het template.
 - [ ]  Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
-- [ ]  Je hebt GitHub correct geconfigureerd op je toestel en je hebt de basiscommando's (via CLI) in je vingers.
+- [x]  Je hebt GitHub correct geconfigureerd op je toestel en je hebt de basiscommando's (via CLI) in je vingers.
 - [x]  Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een ❓.
 
 ## Problemen en oplossingen
 
 ### Probleem 1 - Korte beschrijving van het probleem
 
-Bij het installeren van VirtualBox op macOS (Apple Silicon/M-chip) liep ik telkens tegen een foutmelding aan. Ik ben ervan uitgegaan dat dit kwam doordat VirtualBox niet volledig compatibel is met deze architectuur. Voor het vak Operating Systems (OS) moest ik om die reden ook UTM downloaden en gebruiken in plaats van VirtualBox. Hierdoor heb ik voor VirtualBox ook de 'pin'-functie niet kunnen testen.
+Bij het installeren van VirtualBox op macOS (Apple Silicon/M-chip) liep ik telkens tegen een foutmelding aan. Ik ben ervan uitgegaan dat dit kwam doordat VirtualBox niet volledig compatibel is met deze architectuur. Voor het vak Operating Systems (OS) moest ik om die reden ook UTM downloaden en gebruiken in plaats van VirtualBox. Hierdoor heb ik voor VirtualBox ook de 'pin'-functie niet kunnen testen. Zie foto hieronder om de exacte error die ik krijg.
+
 ![installatie-probleem](./error-vb-sel.png)
 
 
@@ -48,9 +49,6 @@ Om de gebruikte commando's zeker niet te vergeten, hebben we deze elk in onze ei
 ## Reflecties
 
 In het algemeen was de opdracht niet al te ingewikkeld. Het vergde wat tijd en opzoekwerk, maar het was zeker doenbaar. Om de uitbreiding van opdracht 1 te maken, was er wel extra opzoekwerk nodig over hoe je user-input kunt gebruiken om een bepaald commando uit te voeren.
-
-Wat was moeilijk? Wat was eenvoudig? Wat hebben jullie geleerd van de opdracht? Wat zouden jullie anders doen als jullie het opnieuw moesten doen?
-
 
 ## Bronnen
 PWS Academy. (2022 10 februari). Using Homebrew to install and manage software on macOS
