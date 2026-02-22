@@ -35,8 +35,8 @@ In /Users/steven/Documents/SysEngLab/installatie.sh
 
 ### Probleem 1 - Korte beschrijving van het probleem
 
-Bij het installeren van virtualbox op MacOs (silicon processor) kreeg ik telkens het fout. Ik ben ervan uitgegeaan dat het eraan lag dat virtualbox niet compatibel ermee is (bij OS moest ik ook ipv virtualbox UTM downloaden en gebruiken), hierdoor heb ik ook de 'pin'functie niet kunnen gebruiken.
-![installatie-probleem]
+Bij het installeren van VirtualBox op macOS (Apple Silicon/M-chip) liep ik telkens tegen een foutmelding aan. Ik ben ervan uitgegaan dat dit kwam doordat VirtualBox niet volledig compatibel is met deze architectuur. Voor het vak Operating Systems (OS) moest ik om die reden ook UTM downloaden en gebruiken in plaats van VirtualBox. Hierdoor heb ik voor VirtualBox ook de 'pin'-functie niet kunnen testen.
+![installatie-probleem](./)
 
 
 ## Voorbereiding demo
@@ -47,7 +47,7 @@ Om de gebruikte commando's zeker niet te vergeten, hebben we deze elk in onze ei
 
 ## Reflecties
 
-In het algemeen was de opdracht niet veel te ingewikkeld. Het vergde wat tijd en opzoekwerk maar was zeker doenbaar. Om de uitbreiding van opdracht 1 te maken moest er wel nog extra opzoekwerk gedaan worden over hoe je user input kon gebruiken om een bepaalde commando uit te voeren. 
+In het algemeen was de opdracht niet al te ingewikkeld. Het vergde wat tijd en opzoekwerk, maar het was zeker doenbaar. Om de uitbreiding van opdracht 1 te maken, was er wel extra opzoekwerk nodig over hoe je user-input kunt gebruiken om een bepaald commando uit te voeren.
 
 Wat was moeilijk? Wat was eenvoudig? Wat hebben jullie geleerd van de opdracht? Wat zouden jullie anders doen als jullie het opnieuw moesten doen?
 
