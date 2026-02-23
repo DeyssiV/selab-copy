@@ -53,7 +53,7 @@ In het algemeen was de opdracht niet al te ingewikkeld. Het vergde wat tijd en o
 ## Bronnen
 PWS Academy. (2022 10 februari). Using Homebrew to install and manage software on macOS
 
-W3Schools. (z.d.). Bash conditions. Geraadpleegd op 23 februari 2026, van https://www.w3schools.com/bash/bash_conditions.php
+W3Schools. (z.d.). Bash conditions. Geraadpleegd op 22 februari 2026, van https://www.w3schools.com/bash/bash_conditions.php
 
-Ryan’s Tutorials. (z.d.). Bash input. Geraadpleegd op DD MM YYYY, van https://ryanstutorials.net/bash-scripting-tutorial/bash-input.php
+Ryan’s Tutorials. (z.d.). Bash input. Geraadpleegd op 22 februari 2026, van https://ryanstutorials.net/bash-scripting-tutorial/bash-input.php
 
