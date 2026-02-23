@@ -21,6 +21,7 @@ Lijst alle teamleden op met hun GitHub gebruikersnaam:
 - `opdrachten/` bevat alle opdrachten.
 - `cheat-sheets/` bevat de cheat sheets en checklists per student. Dit bevat ook een handleiding om een probleem tijdens de opdrachten te debuggen.
 - `verslagen/` bevat de verslagen van de opdrachten (jullie maken deze).
+- `scripts/` bevat de gemaakte scripts per student.
 
 ## Help, ik heb een mac
 
