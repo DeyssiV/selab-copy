@@ -1,6 +1,6 @@
 # Cheat sheets en checklists
 
-> Student: VOORNAAM FAMILIENAAM
+> Student: Deyssi Vedzijeva
 
 ## Basiscommando's
 
@@ -13,19 +13,26 @@
 | Herstart een service                                   | `sudo systemctl restart SERVICE` |
 | Update de package repositories (Ubuntu & Debian based) | `sudo apt update`                |
 | Installeer een package (Ubuntu & Debian based)         | `sudo apt install PACKAGE`       |
-| Installeer applicatie via brew         | `brew install APPLICATIE`       |
+| Installeer applicatie via brew                         | `brew install APPLICATIE`        |
+| Maak een map                                           | `mkdir PAD/MAPNAAM`              |
+| Verplaats map/bestand                                  | `mv HUIDIGE/PAD NIEUWE/PAD`      |
+| Verwijder bestand                                      | `rm BESTANDNAAM`                 |
 
 ## Git workflow
 
 Simpele git workflow voor projecten met een enkele branch en zonder contributors.
 
-| Task                                                               | Command                   |
-| :----------------------------------------------------------------- | :------------------------ |
-| Status van het huidige project                                     | `git status`              |
-| Selecteer te committen bestanden                                   | `git add FILE...`         |
-| Commit alle wijzigingen naar de lokale repository                  | `git commit -m 'MESSAGE'` |
-| Push lokale wijzigingen naar de remote repository                  | `git push`                |
-| Haal alle wijzigingen van de remote repository binnen in de lokale | `git pull`                |
+| Task                                                               | Command                                            |
+| :----------------------------------------------------------------- | :--------------------------------------------------|
+| Git initialiseren                                                  | `git init`                                         |
+| Haal de online bestanden op                                        | `git pull origin main --allow-unrelated-histories` |
+| Map linken aan nieuwe github repo                                  | `git remote add origin URL/HITHUB/REPO`            |
+| Lijstje laten zien van alle gekoppelde remotes en hun URL          | `git remote -v`                                    |
+| Status van het huidige project                                     | `git status`                                       |
+| Selecteer te committen bestanden                                   | `git add FILE...`                                  |
+| Commit alle wijzigingen naar de lokale repository                  | `git commit -m 'MESSAGE'`                          |
+| Push lokale wijzigingen naar de remote repository                  | `git push`                                         |
+| Haal alle wijzigingen van de remote repository binnen in de lokale | `git pull`                                         |
 
 ## Checklist netwerkconfiguratie
 
