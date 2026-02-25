@@ -12,9 +12,13 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 
 (Deyssi) Je komt standaard in de home directory terecht. (~)
 
+(Louis) System32, dit is de Systeemmap.
+
 ### Vraag 2 - In welke directory heb jij het script bewaard?
 
 (Deyssi) In /Users/deyssi/Desktop/MT1 SEM II/SEL SEM 2/opdracht-1/scripts/opdracht1/deyssi/installatie.sh
+
+(Louis) C:\Users\louis\Documents\SELab\PowerShell_Scripts
 
 ### Vraag 3 - In welke directory is het script bewaard uit het screenshot onder stap 6?
 
