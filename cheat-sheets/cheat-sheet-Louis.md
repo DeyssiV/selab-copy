@@ -26,8 +26,18 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Push lokale wijzigingen naar de remote repository                  | `git push`                |
 | Haal alle wijzigingen van de remote repository binnen in de lokale | `git pull`                |
 
+
+## Winget Commands
+| Taak                                                   | Commando                             |
+| :----------------------------------------------------- | :---------------------------------   |
+| Lijst tonen van software  geinstalleerd via Winget     | `winget list`                        |
+| Alle packages geinstalleerd via winget updaten         | `winget upgrade --all`               |
+| Een applicatie installeren                             | `winget install -e --id <pakketid>`  |
+| Een applicatie deinstalleren                           | `winget uninstall -e --id <pakketid>`|
+| Via console een pakket zoeken                          | `winget search <pakketid>`           |
+
+
 ## Checklist netwerkconfiguratie
 
 1. Is het IP-adres correct? `ip a`
 2. Is de router/default gateway correct? `ip r -n`
-3. Is een DNS-server ingesteld? `cat /etc/resolv.conf`
