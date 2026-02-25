@@ -1,6 +1,6 @@
 # Verslag: Opdracht 1 - Package Manager & Markdown
 
-> Naam verslaggever: Deyssi Vedzijeva
+> Naam verslaggever: Deyssi Vedzijeva, Louis Appeltants, Jonas De Reuse, Silas Pauwels, Alpay Cakal
 
 ## Beschrijving
 
