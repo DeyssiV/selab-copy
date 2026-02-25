@@ -1,6 +1,6 @@
 # Cheat sheets en checklists
 
-> Student: VOORNAAM FAMILIENAAM
+> Student: Louis Appeltants
 
 ## Basiscommando's
 
