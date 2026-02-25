@@ -47,3 +47,14 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | alle script uitvoerbaar maken                                      | `Set-Execution Policy Bypass -scope process `   |
 | printen van tekst                                                  | `write host`                                    |
 
+# Markdwon
+| Wat je wil | Markdown | Resultaat |
+|------------|----------|-----------|
+| Titel | `# Titel` | Grote titel |
+| Subtitel | `## Subtitel` | Kleinere titel |
+| Vet | `**tekst**` | **tekst** |
+| Cursief | `*tekst*` | *tekst* |
+| Lijst | `- item` | • item |
+| Codeblok | ```` ```bash ... ``` ```` | Code met kleur |
+| Link | `[naam](https://...)` | klikbare link |
+
