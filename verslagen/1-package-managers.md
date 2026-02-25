@@ -10,11 +10,11 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 
 ### Vraag 1 - De map/directory waar we ons nu bevinden, wordt getoond. Wat is de naam van deze directory?
 
-(MacOS) Je komt standaar in de home directory terecht. (~)
+(Deyssi) Je komt standaard in de home directory terecht. (~)
 
 ### Vraag 2 - In welke directory heb jij het script bewaard?
 
-(MacOS) In /Users/deyssi/Desktop/MT SEM II/SEL SEM2/installatie.sh
+(Deyssi) In /Users/deyssi/Desktop/MT1 SEM II/SEL SEM 2/opdracht-1/scripts/opdracht1/deyssi/installatie.sh
 
 ### Vraag 3 - In welke directory is het script bewaard uit het screenshot onder stap 6?
 
@@ -27,7 +27,7 @@ In /Users/steven/Documents/SysEngLab/installatie.sh
 - [x]  Je hebt een script (PowerShell of Bash, afhankelijk van je besturingssysteem) geschreven en gebruikt om de opgesomde applicaties te installeren.
 - [x]  Je toont inzicht in de werking van een package manager en kan deze vlot kan gebruiken om basistaken uit te voeren.
 - [x]  Er is een verslag gemaakt op basis van het template.
-- [ ]  Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
+- [x]  Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
 - [x]  Je hebt GitHub correct geconfigureerd op je toestel en je hebt de basiscommando's (via CLI) in je vingers.
 - [x]  Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een ❓.
 
