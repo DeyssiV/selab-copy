@@ -16,6 +16,8 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 
 (Silas) System32
 
+(Jonas) System32
+
 ### Vraag 2 - In welke directory heb jij het script bewaard?
 
 (Deyssi) In /Users/deyssi/Desktop/MT1 SEM II/SEL SEM 2/opdracht-1/scripts/opdracht1/deyssi/installatie.sh
@@ -23,6 +25,8 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 (Louis)  C:\Users\louis\Documents\SELab\PowerShell_Scripts
 
 (Silas)  C:\Users\silas\Documents\SELab\opdracht1
+
+(Jonas) C:\Users\jonas\OneDrive\Bureaublad\school 2025-2026\sem2\installatie.ps1
 
 ### Vraag 3 - In welke directory is het script bewaard uit het screenshot onder stap 6?
 
@@ -32,6 +36,7 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 
 (Silas)  In D:\Users\BertVV\Documents\HoGent\SELab
 
+(Jonas)  D:\Users\BertVV\Documents\HoGent\SELab
 #### Bijkomende Opdracht Windows
 
 | **Taak**                                                                | **Commando**                         |
@@ -63,7 +68,7 @@ Bij het installeren van VirtualBox op macOS (Apple Silicon/M-chip) liep ik telke
 
 ## Voorbereiding demo
 
-Om duidelijk te laten zien dat we opdracht 1 succesvol hebben kunnen afronden, kunnen we dit stap voor stap reconstrueren. Eerst laten we elk zien (aangezien we verschillende OS'en hebben) dat de package manager op ons systeem staat. Hierna kunnen we eventueel een script schrijven om applicaties te installeren via Brew, of het bestaande scriptbestand tonen; meer specifiek het installatie.sh bestand dat we moesten maken voor opdracht 1. Hierbij laten we ook duidelijk zien dat we de package manager vlot kunnen gebruiken.
+Om duidelijk te laten zien dat we opdracht 1 succesvol hebben kunnen afronden, kunnen we dit stap voor stap reconstrueren. Eerst laten we elk zien (aangezien we verschillende OS'en hebben) dat de package manager op ons systeem staat. Hierna kunnen we eventueel een script schrijven om applicaties te installeren via Brew (WinGet), of het bestaande scriptbestand tonen; meer specifiek het installatie.sh bestand dat we moesten maken voor opdracht 1. Hierbij laten we ook duidelijk zien dat we de package manager vlot kunnen gebruiken.
 
 Om de gebruikte commando's zeker niet te vergeten, hebben we deze elk in onze eigen cheat sheet gezet. In deze opdracht hebben we voornamelijk de commando's brew install en brew pin gebruikt, omdat er enkel verwacht werd dat we apps zouden downloaden via de terminal/PowerShell. Om ook vlot met elkaar te communiceren als groep, werd er een GitHub-repo gemaakt waarin dit verslagdocument werd gedeeld en waarheen telkens bepaalde wijzigingen werden gecommit.
 
