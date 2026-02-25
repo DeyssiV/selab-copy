@@ -14,7 +14,7 @@ Lijst alle teamleden op met hun GitHub gebruikersnaam:
 | Student 2 | [Deyssi Vedzijeva](https://github.com/DeyssiV) |
 | Student 3 | [Silas Pauwels](https://github.com/silasp-hogent) |
 | Student 4 | [Alpay Cakal](https://github.com/Alpay-Cakal) |
-| Student 5 | [username](https://github.com/username) |
+| Student 5 | [Louis Appeltants](https://github.com/LouisAppeltants) |
 
 ## Inhoudstafel
 
