@@ -14,17 +14,23 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 
 (Louis)  System32, dit is de Systeemmap.
 
+(Silas) System32
+
 ### Vraag 2 - In welke directory heb jij het script bewaard?
 
 (Deyssi) In /Users/deyssi/Desktop/MT1 SEM II/SEL SEM 2/opdracht-1/scripts/opdracht1/deyssi/installatie.sh
 
 (Louis)  C:\Users\louis\Documents\SELab\PowerShell_Scripts
 
+(Silas)  C:\Users\silas\Documents\SELab\opdracht1
+
 ### Vraag 3 - In welke directory is het script bewaard uit het screenshot onder stap 6?
 
 (Deyssi) In /Users/steven/Documents/SysEngLab/installatie.sh
 
 (Louis)  In D:\Users\BertVV\Documents\HoGent\SELab
+
+(Silas)  In D:\Users\BertVV\Documents\HoGent\SELab
 
 #### Bijkomende Opdracht Windows
 
@@ -52,6 +58,8 @@ Bij het installeren van VirtualBox op macOS (Apple Silicon/M-chip) liep ik telke
 
 ![installatie-probleem](./imgs/error-vb-sel.png)
 
+(Silas) Wanneer ik <winget install > of <winget upgrade> probeerde uit te voeren kreeg ik in de console "Do you agree to all the source agreements terms?". Het probleem is dat de console bevroor en ik er niets in kon typen en dus ook niet kon akkoord gaan met de termen. De oplossing die ik gevonden heb is om eerst volgende commandos uit te voeren <--accept-source-agreements> en <--accept-package-agreements>. Hierna kon ik zonder problemen packages installeren en upgraden.
+
 
 ## Voorbereiding demo
 
@@ -69,4 +77,6 @@ PWS Academy. (2022 10 februari). Using Homebrew to install and manage software o
 W3Schools. (z.d.). Bash conditions. Geraadpleegd op 22 februari 2026, van https://www.w3schools.com/bash/bash_conditions.php
 
 Ryan’s Tutorials. (z.d.). Bash input. Geraadpleegd op 22 februari 2026, van https://ryanstutorials.net/bash-scripting-tutorial/bash-input.php
+
+https://learn.microsoft.com/en-us/windows/package-manager/winget/install
 
