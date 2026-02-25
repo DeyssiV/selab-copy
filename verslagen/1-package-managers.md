@@ -12,19 +12,28 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 
 (Deyssi) Je komt standaard in de home directory terecht. (~)
 
-(Louis) System32, dit is de Systeemmap.
+(Louis)  System32, dit is de Systeemmap.
 
 ### Vraag 2 - In welke directory heb jij het script bewaard?
 
 (Deyssi) In /Users/deyssi/Desktop/MT1 SEM II/SEL SEM 2/opdracht-1/scripts/opdracht1/deyssi/installatie.sh
 
-(Louis) C:\Users\louis\Documents\SELab\PowerShell_Scripts
+(Louis)  C:\Users\louis\Documents\SELab\PowerShell_Scripts
 
 ### Vraag 3 - In welke directory is het script bewaard uit het screenshot onder stap 6?
 
-In /Users/steven/Documents/SysEngLab/installatie.sh
+(Deyssi) In /Users/steven/Documents/SysEngLab/installatie.sh
 
+(Louis)  In D:\Users\BertVV\Documents\HoGent\SELab
 
+#### Bijkomende Opdracht Windows
+
+| **Taak**                                                                | **Commando**                         |
+| ----------------------------------------------------------------------- | ------------                         |
+| Een lijst tonen van de software die nu geïnstalleerd is via WinGet      | `winget list`                        |
+| Alle packages die nu geïnstalleerd zijn bijwerken tot de laatste versie | `winget upgrade --all`               |
+| Via de console een package opzoeken                                     | `winget search <pakketid>`           |
+| Een geïnstalleerd pakket verwijderen                                    | `winget uninstall -e --id <pakketid>`|
 ## Evaluatiecriteria
 
 - [x] Je hebt een package manager voor jouw besturingssysteem geïnstalleerd.
