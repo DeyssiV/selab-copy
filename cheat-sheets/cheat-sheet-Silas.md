@@ -34,6 +34,8 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Een applicatie installeren                             | `winget install -e --id <pakketid>`  |
 | Een applicatie deinstalleren                           | `winget uninstall -e --id <pakketid>`|
 | Via console een pakket zoeken                          | `winget search <pakketid>`           |
+| Een packet pinnen                                      | `winget pin <pakketid>`              |
+| Een packet unpinnen                                    | `winget pin remove <pakketid>`       |
 
 ## Powershell Commands
 |Taak                                                    | Commando                |
