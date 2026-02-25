@@ -34,7 +34,16 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 ## WinGet
 | Task                                                               | Command                                         |
 | :----------------------------------------------------------------- | :---------------------------------------------- |
-| updaten van alle programma's                                       | `WinGet upgrade --all `                         |
-| alle script uitvoerbaar maken                                      | `Set-Execution Policy Bypass -scope process `   |
+| Alle packages geinstalleerd via winget updaten                     | `winget upgrade --all`                          |
+| Een applicatie installeren                                         | `winget install -e --id <pakketid>`             |
+| Een applicatie deinstalleren                                       | `winget uninstall -e --id <pakketid>`           |
+| Via console een pakket zoeken                                      | `winget search <pakketid>`                      |
+| Lijst tonen van software  geinstalleerd via Winget                 | `winget list`                                   |
 
+
+## Powershell
+| Task                                                               | Command                                         |
+| :----------------------------------------------------------------- | :---------------------------------------------- |
+| alle script uitvoerbaar maken                                      | `Set-Execution Policy Bypass -scope process `   |
+| printen van tekst                                                  | `write host`                                    |
 
