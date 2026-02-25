@@ -63,6 +63,8 @@ Bij het installeren van VirtualBox op macOS (Apple Silicon/M-chip) liep ik telke
 
 ![installatie-probleem](./imgs/error-vb-sel.png)
 
+### Probleem 2 - Korte beschrijving van het probleem
+
 (Silas) Wanneer ik `winget install` of `winget upgrade` probeerde uit te voeren kreeg ik in de console "Do you agree to all the source agreements terms?". Het probleem is dat de console bevroor en ik er niets in kon typen en dus ook niet kon akkoord gaan met de termen. De oplossing die ik gevonden heb is om eerst volgende commandos uit te voeren `--accept-source-agreements` en `--accept-package-agreements`. Hierna kon ik zonder problemen packages installeren en upgraden.
 
 
