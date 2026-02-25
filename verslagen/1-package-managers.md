@@ -18,15 +18,19 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 
 (Jonas) System32
 
+(Alpay) System32
+
 ### Vraag 2 - In welke directory heb jij het script bewaard?
 
 (Deyssi) In /Users/deyssi/Desktop/MT1 SEM II/SEL SEM 2/opdracht-1/scripts/opdracht1/deyssi/installatie.sh
 
-(Louis)  C:\Users\louis\Documents\SELab\PowerShell_Scripts
+(Louis)  In C:\Users\louis\Documents\SELab\PowerShell_Scripts
 
-(Silas)  C:\Users\silas\Documents\SELab\opdracht1
+(Silas)  In C:\Users\silas\Documents\SELab\opdracht1
 
-(Jonas) C:\Users\jonas\OneDrive\Bureaublad\school 2025-2026\sem2\installatie.ps1
+(Jonas)  In C:\Users\jonas\OneDrive\Bureaublad\school 2025-2026\sem2\installatie.ps1
+
+(Alpay)  In C:\Users\cakal\Downloads\Toegepaste Informatica 2025-2026 (Harde schijf)\2025-2026 Semester 2\System engineering lab\SELab Opdracht 1\Installatie.ps1
 
 ### Vraag 3 - In welke directory is het script bewaard uit het screenshot onder stap 6?
 
@@ -36,7 +40,10 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 
 (Silas)  In D:\Users\BertVV\Documents\HoGent\SELab
 
-(Jonas)  D:\Users\BertVV\Documents\HoGent\SELab
+(Jonas)  In D:\Users\BertVV\Documents\HoGent\SELab
+
+(Alpay)  In D:\Users\BertVV\Documents\HoGent\SELab\Installatie.ps1
+
 #### Bijkomende Opdracht Windows
 
 | **Taak**                                                                | **Commando**                         |
@@ -45,6 +52,7 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 | Alle packages die nu geïnstalleerd zijn bijwerken tot de laatste versie | `winget upgrade --all`               |
 | Via de console een package opzoeken                                     | `winget search <pakketid>`           |
 | Een geïnstalleerd pakket verwijderen                                    | `winget uninstall -e --id <pakketid>`|
+
 ## Evaluatiecriteria
 
 - [x] Je hebt een package manager voor jouw besturingssysteem geïnstalleerd.
@@ -66,7 +74,6 @@ Bij het installeren van VirtualBox op macOS (Apple Silicon/M-chip) liep ik telke
 ### Probleem 2 - Korte beschrijving van het probleem
 
 (Silas) Wanneer ik `winget install` of `winget upgrade` probeerde uit te voeren kreeg ik in de console "Do you agree to all the source agreements terms?". Het probleem is dat de console bevroor en ik er niets in kon typen en dus ook niet kon akkoord gaan met de termen. De oplossing die ik gevonden heb is om eerst volgende commandos uit te voeren `--accept-source-agreements` en `--accept-package-agreements`. Hierna kon ik zonder problemen packages installeren en upgraden.
-
 
 ## Voorbereiding demo
 
