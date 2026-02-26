@@ -38,10 +38,12 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Een packet unpinnen                                    | `winget pin remove <pakketid>`       |
 
 ## Powershell Commands
-|Taak                                                    | Commando                |
-|:------------------------------------------------------ | :---------------------- |
-| Text schrijven in de console                           | `Write-Host`            |
-| Commentaar schrijven                                   | `#Voorbeeld-tekst`      |
+|Taak                                                    | Commando                                    |
+|:------------------------------------------------------ | :----------------------                     |
+| Als je het script niet kan runnen                      | `Set-ExecutionPolicy Bypass -Scope Process` |
+| Text schrijven in de console                           | `Write-Host`                                |
+| Invoer van gebruiker lezen                             | `Read-Host`                                 |
+| Commentaar schrijven                                   | `#Voorbeeld-tekst`                          |
 
 ## Checklist netwerkconfiguratie
 
