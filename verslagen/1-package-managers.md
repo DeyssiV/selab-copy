@@ -44,6 +44,14 @@ We moesten leren werken met de package manager van ons besturingssysteem om het 
 
 (Alpay)  In D:\Users\BertVV\Documents\HoGent\SELab\Installatie.ps1
 
+### Vraag 4 - Wat doen de opties `-e` en `--id` voor winget install?
+
+`-e` of `--exact` kijkt of je invoer exact hetzelde is als wat je wenst te installeren. 
+
+`--id` zorgt ervoor dat je invoer vergeleken wordt met de ID van de package die je wenst te installeren.
+
+Door `-e` en `--id` te combineren zorg je ervoor dat het ID die je ingeeft exact hetzelfde moet zijn als het ID van de package die je wil installeren.
+
 #### Bijkomende Opdracht Windows
 
 | **Taak**                                                                | **Commando**                         |
