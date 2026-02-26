@@ -51,8 +51,8 @@ _(zie uiteindelijk script)_
 
 ### Vraag 4 - Wat doen de opties -e en --id voor winget install?
 
-- -e: zorgt ervoor dat er wordt nagekeken op een precieze overeenkomst
-- --id: zorgt ervoor dat het unieke ID wordt gebruikt dat je ook meegeeft (<ontwikkelaar>.<naamApplicatie>)
+- `-e` zorgt ervoor dat er wordt nagekeken op een precieze overeenkomst.
+- `--id` zorgt ervoor dat het unieke ID wordt gebruikt dat je ook meegeeft (ontwikkelaar.naamApplicatie).
 
 ## Evaluatiecriteria (standaard)
 
@@ -117,3 +117,4 @@ Ik heb nu al opvallend veel bijgeleerd, en kijk ernaar uit om samen met de rest 
 - zoeken naar ID's om te gebruiken in mijn script samen met `winget install -e --id`: [Winget Run](https://winget.run/)
 
 - de switch-structuur gebruiken om de gebruiker keuzemogelijkheden te geven in het script: [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_switch?view=powershell-7.5)
+
