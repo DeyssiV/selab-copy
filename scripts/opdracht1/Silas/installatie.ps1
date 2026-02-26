@@ -12,8 +12,8 @@ do {
     Write-Host "8 = Scene Builder"
     Write-Host "9 = WinSCP"
     Write-Host "10 = MYSQL Workbench"
-    Write-Host "11 = Algemene project applicaties (git | VS code | Virtualbox | Scenebuilder | WinSCP | MYSQL Workbench"
-    Write-Host "`n`r0 = SCRIPT EINDIGEN"
+    Write-Host "11 = Algemene project applicaties (git | VS code | Virtualbox | Scenebuilder | WinSCP | MYSQL Workbench)"
+    Write-Host "`n`r0 = SCRIPT EINDIGEN" -ForegroundColor Green -BackgroundColor Black
 
     $keuze = Read-Host "`n`rGeef je keuze"
 
