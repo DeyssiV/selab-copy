@@ -4,7 +4,7 @@
 
 ## Beschrijving
 
-In opdracht 1 kan je kennismaken met een packet manager, en het gemak en de tijdsbesparing die het teweeg brengt.
+In opdracht 1 kan je kennismaken met een package manager, en het gemak en de tijdsbesparing die het teweeg brengt.
 Geen tijdrovende installatie-wizards meer, maar een centrale plaats om software te installeren, en de nodige applicaties in één keer bij te werken zonder verdere afleidingen.
 
 Daarnaast kan je hier ook leren werken met een script, hetgeen de sleutel is tot de automatisering en het beheer van computersystemen.
@@ -117,4 +117,5 @@ Ik heb nu al opvallend veel bijgeleerd, en kijk ernaar uit om samen met de rest 
 - zoeken naar ID's om te gebruiken in mijn script samen met `winget install -e --id`: [Winget Run](https://winget.run/)
 
 - de switch-structuur gebruiken om de gebruiker keuzemogelijkheden te geven in het script: [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_switch?view=powershell-7.5)
+
 
