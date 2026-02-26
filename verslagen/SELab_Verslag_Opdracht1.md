@@ -30,11 +30,11 @@ D:\Users\BertVV\Documents\HoGent\SELab\Installatie.ps1
 
 ### Opdracht 1 - Gebruik het commando cd (change directory) om naar de map te gaan waar je je script hebt bewaard.
 
-![cd gebruikt om naar de correcte map te gaan](image-1.png)
+![cd gebruikt om naar de correcte map te gaan](./imgs/SELab_Verslag_afbeelding_Opdracht1.png)
 
 ### Opdracht 2 - Tik .\Installatie.ps1 en druk ENTER om het script uit te voeren.
 
-![vanuit de map waar het script staat, het script uitvoeren](image-2.png)
+![vanuit de map waar het script staat, het script uitvoeren](./imgs/SELab_Verslag_afbeelding_Opdracht2.png)
 
 ### Opdracht 3 - Verander de kleuren van de uitvoer, bv. groene tekst op zwarte achtergrond. Tip: Gebruik de commandolijst rechts om de juiste syntax te bepalen.
 
@@ -78,7 +78,7 @@ _(zie uiteindelijk script)_
 
 Bij het proberen runnen van het eerste script kreeg ik onderstaande foutmelding op mijn systeem:
 
-![foutmelding bij runnen script](image.png)
+![foutmelding bij runnen script](./imgs/SELab_Verslag_afbeelding_Probleem1.png)
 
 In de opdracht stond er opvallend genoeg meteen een oplossing voor dit probleem vermeld. Dit zou willen zeggen dat meerdere studenten dit probleem gehad zullen hebben...
 
@@ -115,4 +115,5 @@ Ik heb nu al opvallend veel bijgeleerd, en kijk ernaar uit om samen met de rest 
 - VS Code, meer bepaald in verband met de .md-extensie en het toevoegen van afbeeldingen: [VS Code](https://code.visualstudio.com/docs/languages/markdown)
 - tekst in mijn script van opmaak voorzien: [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host?view=powershell-7.5)
 - zoeken naar ID's om te gebruiken in mijn script samen met `winget install -e --id`: [Winget Run](https://winget.run/)
+
 - de switch-structuur gebruiken om de gebruiker keuzemogelijkheden te geven in het script: [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_switch?view=powershell-7.5)
