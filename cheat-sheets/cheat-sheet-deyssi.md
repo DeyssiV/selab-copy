@@ -30,9 +30,14 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Lijstje laten zien van alle gekoppelde remotes en hun URL          | `git remote -v`                                    |
 | Status van het huidige project                                     | `git status`                                       |
 | Selecteer te committen bestanden                                   | `git add FILE...`                                  |
+| Selecteer te ALLE committen bestanden                              | `git add .`                                        |
 | Commit alle wijzigingen naar de lokale repository                  | `git commit -m 'MESSAGE'`                          |
+| Selecteer alle bestanden EN commit naar de lokale repository       | `git commit -am 'MESSAGE'`                         |
 | Push lokale wijzigingen naar de remote repository                  | `git push`                                         |
 | Haal alle wijzigingen van de remote repository binnen in de lokale | `git pull`                                         |
+| Update git project lokaal                                          | `git fetch`                                        |
+| Branch maken en erin gaan (obv de dir waarin je zit)               | `git checkout -b NAAM/BRANCH`                      |
+
 
 ## Checklist netwerkconfiguratie
 
