@@ -18,7 +18,7 @@
 
 Simpele git workflow voor projecten met een enkele branch en zonder contributors.
 
-| Task                                                               | Command                   |
+| Taak                                                               | Commando                  |
 | :----------------------------------------------------------------- | :------------------------ |
 | Status van het huidige project                                     | `git status`              |
 | Selecteer te committen bestanden                                   | `git add FILE...`         |
@@ -26,18 +26,28 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Push lokale wijzigingen naar de remote repository                  | `git push`                |
 | Haal alle wijzigingen van de remote repository binnen in de lokale | `git pull`                |
 
-
 ## Winget Commands
 | Taak                                                   | Commando                             |
 | :----------------------------------------------------- | :---------------------------------   |
-| Lijst tonen van software  geinstalleerd via Winget     | `winget list`                        |
+| Lijst tonen van software geinstalleerd via Winget      | `winget list`                        |
 | Alle packages geinstalleerd via winget updaten         | `winget upgrade --all`               |
 | Een applicatie installeren                             | `winget install -e --id <pakketid>`  |
 | Een applicatie deinstalleren                           | `winget uninstall -e --id <pakketid>`|
 | Via console een pakket zoeken                          | `winget search <pakketid>`           |
 
+## MySQL & netwerkconfiguratie
+
+| Taak                                          | Commando                                      |
+| :---------------------------------------------| :-------------------------------------------- |
+| Bekijk luisterende TCP-poorten                | `sudo ss -tlnp`                               |
+| Controleer of MySQL luistert (specifiek)      | `sudo ss -tlnp \| grep 3306`                  |
+| Open MySQL configuratiebestand                | `sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf`|
+| Herstart MySQL service                        | `sudo systemctl restart mysql`                |
+| Controleer MySQL service status               | `systemctl status mysql`                      |
+| Nieuwe gebruiker met externe toegang          |`CREATE USER 'user'@'%' IDENTIFIED BY 'pass';` |
 
 ## Checklist netwerkconfiguratie
 
 1. Is het IP-adres correct? `ip a`
 2. Is de router/default gateway correct? `ip r -n`
+3. Luistert MySQL op de juiste interface? `sudo ss -tlnp | grep 3306`
