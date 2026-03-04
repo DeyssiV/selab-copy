@@ -11,7 +11,7 @@ We moesten een Databankserver leren installeren op een virtuele machine en de ne
 
 ### Vraag 1 - Waaraan zie je dat MySQL enkel luistert?
 
-Je kan zien dat het enkel luistert omdat hij op het adress 127.0.0.1 zit en dit is het Loopback-adres. Dit dient enkel voor lokale verbindingen met dezelfde machine.
+Je kan zien dat het enkel luistert omdat hij op het adres 127.0.0.1 zit en dit is het Loopback-adres. Dit dient enkel voor lokale verbindingen met dezelfde machine.
 
 ### Vraag 2 - Waarom 0.0.0.0 en niet 192.168.56.20?
 
@@ -75,3 +75,4 @@ was eenvoudig. We hebben geleerd hoe we services herstarten en configuraties toe
 https://learn.microsoft.com/en-us/answers/questions/1444702/what-is-the-significance-of-the-127-0-0-1-ip-addre
 
 https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html
+
