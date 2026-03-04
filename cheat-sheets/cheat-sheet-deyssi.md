@@ -37,6 +37,7 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Haal alle wijzigingen van de remote repository binnen in de lokale | `git pull`                                         |
 | Update git project lokaal                                          | `git fetch`                                        |
 | Branch maken en erin gaan (obv de dir waarin je zit)               | `git checkout -b NAAM/BRANCH`                      |
+| MySQL Console openen (omdat de root gebruiker nu een wachtwoord heeft)           | `mysql -u root -p`                      |
 
 
 ## Checklist netwerkconfiguratie
