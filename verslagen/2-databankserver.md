@@ -1,0 +1,76 @@
+# Verslag: SUBJECT
+
+> Naam verslaggever: Louis Appeltants
+
+## Beschrijving
+
+We moesten een Databankserver leren installeren op een virtuele machine en de netwerkinstellingen veranderen. om een realistische testomgeving te hebben.
+
+## Antwoorden op de vragen in de opdracht
+
+
+### Vraag 1 - Waaraan zie je dat MySQL enkel luistert?
+
+Je kan zien dat het enkel lusiternt omdat hij op het adress 127.0.0.1 zit en dit is het Loopback-adres. Dit dient enkel voor lokale verbindingen met dezelfde machine.
+
+### Vraag 2 - Waarom 0.0.0.0 en niet 192.168.56.20?
+
+Bij het adress 0.0.0.0 luistert MySQL naar alle netwerinterfaces, bij 192.168.56.20 luistert MySQL enkel naar het opgegeven ip adress. Dus als dit zou veranderen is de Database niet meer toegankelijk.
+
+### Vraag 3 - Waaraan zie je dat de wijziging effect heeft gehad?
+
+Je kan zien bij de uitvoer van het commando `ss -tlnp` dat MySQL als luisteradres nu 0.0.0.0 heeft door de :3306 die erachter staat
+
+### Vraag 4 - Wat is het verschil met de vorige uitvoer van dit commando?
+
+Nu is MySQL toegankelijk vanaf iedere netwerkinterface, het verschil zit dus in de bereikbaarheid.
+Het luisteradres voor MySQL is nu 0.0.0.0 in plaats van 127.0.0.1
+
+## Evaluatiecriteria
+
+- [x] De VM start op en je kan inloggen:
+  - [x] De VM heeft een host-only adapter en een NAT adapter met de correcte instellingen.
+  - [x] Je kan pingen vanaf je fysieke systeem naar de host-only adapter van de VM.
+  - [x] Je kan aantonen dat MySQL actief is op de VM en luistert op alle interfaces.
+- [x] Je kan MySQL Workbench gebruiken om een connectie te maken met de databankserver:
+  - [x] Je hebt een **werkende** connectie voor de admin-gebruiker.
+  - [x] Je hebt een **werkende** connectie voor de applicatie-gebruiker.
+- [x] Er is een verslag gemaakt op basis van het template.
+- [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
+- [x] Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een :question:.
+
+
+## Problemen en oplossingen
+
+Geen problemen ondervonden.
+
+
+
+
+## Voorbereiding demo
+
+# MySQL Bind-Address Aanpassing
+
+Om te laten zien dat we MySQL konden configureren zodat het op alle netwerkinterfaces luistert, hebben we volgende stappen uitgevoerd:
+
+## 1️⃣ Initieel: MySQL luistert enkel lokaal
+- **Command:** `sudo ss -tlnp`  
+- **Observatie:** `127.0.0.1:3306` → MySQL alleen lokaal bereikbaar.  
+- **Configuratiebestand:** `/etc/mysql/mysql.conf.d/mysqld.cnf` met `bind-address = 127.0.0.1`.
+
+## 2️⃣ Bind-address aanpassen
+- **Command:** 
+```bash
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+# wijzig naar bind-address = 0.0.0.0
+```
+## Reflecties
+
+De opdracht was vooral leerzaam omdat we inzicht kregen in hoe MySQL netwerkinterfaces gebruikt 
+en hoe bind-addressen werken. Het aanpassen van het configuratiebestand en controleren met `ss` 
+was eenvoudig. We hebben geleerd hoe we services herstarten en configuraties toepassen.
+
+## Bronnen
+
+https://learn.microsoft.com/en-us/answers/questions/1444702/what-is-the-significance-of-the-127-0-0-1-ip-addre
+https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html
