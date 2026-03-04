@@ -11,20 +11,20 @@ We moesten een Databankserver leren installeren op een virtuele machine en de ne
 
 ### Vraag 1 - Waaraan zie je dat MySQL enkel luistert?
 
-Je kan zien dat het enkel lusiternt omdat hij op het adress 127.0.0.1 zit en dit is het Loopback-adres. Dit dient enkel voor lokale verbindingen met dezelfde machine.
+Je kan zien dat het enkel luistert omdat hij op het adress 127.0.0.1 zit en dit is het Loopback-adres. Dit dient enkel voor lokale verbindingen met dezelfde machine.
 
 ### Vraag 2 - Waarom 0.0.0.0 en niet 192.168.56.20?
 
-Bij het adress 0.0.0.0 luistert MySQL naar alle netwerinterfaces, bij 192.168.56.20 luistert MySQL enkel naar het opgegeven ip adress. Dus als dit zou veranderen is de Database niet meer toegankelijk.
+Bij het adres 0.0.0.0 luistert MySQL naar alle netwerinterfaces, bij 192.168.56.20 luistert MySQL enkel naar het opgegeven ip adres. Dus als dit zou veranderen is de database niet meer toegankelijk.
 
 ### Vraag 3 - Waaraan zie je dat de wijziging effect heeft gehad?
 
-Je kan zien bij de uitvoer van het commando `ss -tlnp` dat MySQL als luisteradres nu 0.0.0.0 heeft door de :3306 die erachter staat
+Je kan zien bij de uitvoer van het commando `ss -tlnp` dat MySQL als luisteradres nu 0.0.0.0 heeft door de :3306 die erachter staat.
 
 ### Vraag 4 - Wat is het verschil met de vorige uitvoer van dit commando?
 
-Nu is MySQL toegankelijk vanaf iedere netwerkinterface, het verschil zit dus in de bereikbaarheid.
-Het luisteradres voor MySQL is nu 0.0.0.0 in plaats van 127.0.0.1
+Nu is MySQL toegankelijk vanaf elke netwerkinterface, het verschil zit dus in de bereikbaarheid.
+Het luisteradres voor MySQL is nu 0.0.0.0 in plaats van 127.0.0.1.
 
 ## Evaluatiecriteria
 
@@ -73,4 +73,5 @@ was eenvoudig. We hebben geleerd hoe we services herstarten en configuraties toe
 ## Bronnen
 
 https://learn.microsoft.com/en-us/answers/questions/1444702/what-is-the-significance-of-the-127-0-0-1-ip-addre
+
 https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html
