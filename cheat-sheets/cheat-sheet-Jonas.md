@@ -13,6 +13,9 @@
 | Herstart een service                                   | `sudo systemctl restart SERVICE` |
 | Update de package repositories (Ubuntu & Debian based) | `sudo apt update`                |
 | Installeer een package (Ubuntu & Debian based)         | `sudo apt install PACKAGE`       |
+|Controleer welke netwerkpoorten in gebruik zijn         | `sudo ss -tlnp`                  |
+
+
 
 ## Git workflow
 
@@ -46,6 +49,7 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | :----------------------------------------------------------------- | :---------------------------------------------- |
 | alle script uitvoerbaar maken                                      | `Set-Execution Policy Bypass -scope process `   |
 | printen van tekst                                                  | `write host`                                    |
+| Test of adres bereikbaar is                                        | `ping .../.../.../...`                          |
 
 # Markdwon
 | Wat je wil | Markdown | Resultaat |
