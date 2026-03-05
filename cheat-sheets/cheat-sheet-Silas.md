@@ -13,6 +13,10 @@
 | Herstart een service                                   | `sudo systemctl restart SERVICE` |
 | Update de package repositories (Ubuntu & Debian based) | `sudo apt update`                |
 | Installeer een package (Ubuntu & Debian based)         | `sudo apt install PACKAGE`       |
+| Laatste regel in lijst                                 | `G`                              |
+| voortwaarts zoeken                                     | `/`                              |
+| achterwaarts zoeken                                    | `?`                              |
+| volgend zoekresultaat                                  | `n`                              |
 
 ## Git workflow
 
@@ -44,6 +48,17 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Text schrijven in de console                           | `Write-Host`                                |
 | Invoer van gebruiker lezen                             | `Read-Host`                                 |
 | Commentaar schrijven                                   | `#Voorbeeld-tekst`                          |
+
+## MYSQL & netwerkconfig
+|Taak                                                    | Commando                                             |
+|:------------------------------------------------------ | :----------------------                              |
+| controleer of service draait                           | `systemctl status mysql`                             |
+| controleer welke netwerkpoorten in gebruik zijn        | `sudo ss -tlnp`                                      |
+| herstart mysql                                         | `sudo systemctl restart mysql`                       |
+| filteren op poorten die luisteren                      | `sudo lsof -p [PID] \| grep LISTEN`                  |
+| start mysql console                                    | `sudo mysql -u root -p`                              |
+| use mysql                                              | `use mysql`                                          |
+| maak gebruiker                                         | `create user 'admin'@'%' identified by 'letmein';`   |
 
 ## Checklist netwerkconfiguratie
 
