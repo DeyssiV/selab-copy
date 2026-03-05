@@ -11,12 +11,29 @@
 | Start een service                                      | `sudo systemctl start SERVICE`   |
 | Stop een service                                       | `sudo systemctl stop SERVICE`    |
 | Herstart een service                                   | `sudo systemctl restart SERVICE` |
+| Zet een service aan                                     | `sudo systemctl enable SERVICE`   |
 | Update de package repositories (Ubuntu & Debian based) | `sudo apt update`                |
 | Installeer een package (Ubuntu & Debian based)         | `sudo apt install PACKAGE`       |
 | Installeer applicatie via brew                         | `brew install APPLICATIE`        |
 | Maak een map                                           | `mkdir PAD/MAPNAAM`              |
 | Verplaats map/bestand                                  | `mv HUIDIGE/PAD NIEUWE/PAD`      |
 | Verwijder bestand                                      | `rm BESTANDNAAM`                 |
+| MySQL Console openen (omdat de root gebruiker nu een wachtwoord heeft)           | `mysql -u root -p`                      |
+| Inloggen vanaf je fysieke systeem via ssh naar VM                                      | `ssh USERNAME@IP-ADRESS`                 |
+| Systeem afsluiten                                  | `sudo poweroff`      |
+| Verander wachtwoord                                  | `passwd`      |
+| Gedownloade pakket installeren                                  | `sudo dpkg -i BESTANDNAAM.deb`      |
+| Bestand aanpassen via nano                                  | `sudo nano PAD/NAAR/BESTAND`      |
+| Automatische schermvergrendeling                                  | `gsettings set org.gnome.desktop.screensaver lock-enabled false`     |
+| Start de MySQL interactieve shell                                   | `sudo mysql`      |
+| Overzicht tonen van alle actieve netwerkpoorten                                  | `sudo ss -tlnp`      |
+
+
+
+
+
+
+
 
 ## Git workflow
 
@@ -37,11 +54,10 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Haal alle wijzigingen van de remote repository binnen in de lokale | `git pull`                                         |
 | Update git project lokaal                                          | `git fetch`                                        |
 | Branch maken en erin gaan (obv de dir waarin je zit)               | `git checkout -b NAAM/BRANCH`                      |
-| MySQL Console openen (omdat de root gebruiker nu een wachtwoord heeft)           | `mysql -u root -p`                      |
 
 
 ## Checklist netwerkconfiguratie
 
-1. Is het IP-adres correct? `ip a`
+1. Is het IP-adres correct? `ip a`/ `ifconfig`
 2. Is de router/default gateway correct? `ip r -n`
 3. Is een DNS-server ingesteld? `cat /etc/resolv.conf`
