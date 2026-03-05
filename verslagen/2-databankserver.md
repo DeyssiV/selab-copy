@@ -76,3 +76,13 @@ https://learn.microsoft.com/en-us/answers/questions/1444702/what-is-the-signific
 
 https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html
 
+https://elosupport.elotouch.com/hc/en-us/articles/31652913111319-How-do-I-Disable-Screen-Lock-and-System-Suspend-in-Ubuntu#:~:text=Method%201:%20Using%20the%20Command,the%20Graphical%20User%20Interface%20(GUI)
+
+https://vitux.com/how-to-enable-disable-automatic-login-in-ubuntu/
+
+[https://www.xda-developers.com/how-to-install-vs-code-on-ubuntu/#:~:text=How%20to%20install%20VS%20Code%20on%20Ubuntu%20through%20the%20Software,on%20your%20screen%20for%20installation.
+](https://www2.lawrence.edu/fast/GREGGJ/CMSC480/intro/software.html)
+
+https://www.youtube.com/watch?v=a-sOEQDUTKE
+
+
