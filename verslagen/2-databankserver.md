@@ -72,17 +72,22 @@ was eenvoudig. We hebben geleerd hoe we services herstarten en configuraties toe
 
 ## Bronnen
 
-https://learn.microsoft.com/en-us/answers/questions/1444702/what-is-the-significance-of-the-127-0-0-1-ip-addre
+Sreekanth, S. (2023, 11 november). What is the significance of the 127.0.0.1 IP address? [Online forum post]. Microsoft Learn. https://learn.microsoft.com/en-us/answers/questions/1444702/what-is-the-significance-of-the-127-0-0-1-ip-addre
 
-https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html
+Oracle. (2024). MySQL 8.4 Reference Manual: Server System Variables. https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html
 
-https://elosupport.elotouch.com/hc/en-us/articles/31652913111319-How-do-I-Disable-Screen-Lock-and-System-Suspend-in-Ubuntu#:~:text=Method%201:%20Using%20the%20Command,the%20Graphical%20User%20Interface%20(GUI)
+Literatuurlijst:
 
-https://vitux.com/how-to-enable-disable-automatic-login-in-ubuntu/
+Elo Support. (2024, 21 augustus). How do I disable Screen Lock and System Suspend in Ubuntu. https://elosupport.elotouch.com/hc/en-us/articles/31652913111319-How-do-I-Disable-Screen-Lock-and-System-Suspend-in-Ubuntu
 
-[https://www.xda-developers.com/how-to-install-vs-code-on-ubuntu/#:~:text=How%20to%20install%20VS%20Code%20on%20Ubuntu%20through%20the%20Software,on%20your%20screen%20for%20installation.
-](https://www2.lawrence.edu/fast/GREGGJ/CMSC480/intro/software.html)
+Vitux. (2024, 18 mei). How to enable/disable automatic login in Ubuntu. https://vitux.com/how-to-enable-disable-automatic-login-in-ubuntu/
 
-https://www.youtube.com/watch?v=a-sOEQDUTKE
+Arsh, J. (2024, 1 juli). How to install VS Code on Ubuntu. XDA Developers. https://www.xda-developers.com/how-to-install-vs-code-on-ubuntu/
+
+Gregg, J. (z.d.). Software development tools. Lawrence University. https://www2.lawrence.edu/fast/GREGGJ/CMSC480/intro/software.html
+
+Bro Code. (2022, 11 februari). Java Tutorial for Beginners ☕ [Video]. YouTube. https://www.youtube.com/watch?v=a-sOEQDUTKE
+
+What is a Loopback Address? (2024, 15 mei). GeeksforGeeks. https://www.geeksforgeeks.org/computer-networks/what-is-a-loopback-address/
 
 
