@@ -36,7 +36,7 @@ Het luisteradres voor MySQL is nu 0.0.0.0 in plaats van 127.0.0.1.
   - [x] Je hebt een **werkende** connectie voor de admin-gebruiker.
   - [x] Je hebt een **werkende** connectie voor de applicatie-gebruiker.
 - [x] Er is een verslag gemaakt op basis van het template.
-- [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
+- [x] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
 - [x] Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een :question:.
 
 
@@ -91,6 +91,7 @@ Bro Code. (2022, 11 februari). Java Tutorial for Beginners ☕ [Video]. YouTube.
 What is a Loopback Address? (2024, 15 mei). GeeksforGeeks. https://www.geeksforgeeks.org/computer-networks/what-is-a-loopback-address/
 
 Tech for All. (2021, 28 aug). Bestanden overbrengen tussen Windows en Linux met WinSCP. https://www.youtube.com/watch?v=Pu-PCMPsOpg
+
 
 
 
