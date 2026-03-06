@@ -13,6 +13,7 @@
 | Herstart een service                                   | `sudo systemctl restart SERVICE` |
 | Update de package repositories (Ubuntu & Debian based) | `sudo apt update`                |
 | Installeer een package (Ubuntu & Debian based)         | `sudo apt install PACKAGE`       |
+| Log in als root                                        | `sudo -i`                        |
 | Laatste regel in lijst                                 | `G`                              |
 | voortwaarts zoeken                                     | `/`                              |
 | achterwaarts zoeken                                    | `?`                              |
