@@ -55,7 +55,9 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | controleer of service draait                           | `systemctl status mysql`                             |
 | controleer welke netwerkpoorten in gebruik zijn        | `sudo ss -tlnp`                                      |
 | herstart mysql                                         | `sudo systemctl restart mysql`                       |
-| filteren op poorten die luisteren                      | `sudo lsof -p [PID] \| grep LISTEN`                  |
+| filteren op poorten die luisteren voor een prcoes      | `sudo lsof -p [PID] \| grep LISTEN`                  |
+| systeem logs bekijken                                  | `journalctl -u mysqld`                               |
+| Start SSH                                              | `sudo systemctl start ssh`                           |
 | start mysql console                                    | `sudo mysql -u root -p`                              |
 | use mysql                                              | `use mysql`                                          |
 | maak gebruiker                                         | `create user 'admin'@'%' identified by 'letmein';`   |
