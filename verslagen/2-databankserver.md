@@ -90,4 +90,7 @@ Bro Code. (2022, 11 februari). Java Tutorial for Beginners ☕ [Video]. YouTube.
 
 What is a Loopback Address? (2024, 15 mei). GeeksforGeeks. https://www.geeksforgeeks.org/computer-networks/what-is-a-loopback-address/
 
+Tech for All. (2021, 28 aug). Bestanden overbrengen tussen Windows en Linux met WinSCP. https://www.youtube.com/watch?v=Pu-PCMPsOpg
+
+
 
