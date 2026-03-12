@@ -9,14 +9,14 @@
 | Bekijk IP-adressen van alle netwerkadapters            | `ip a`                           |
 | Bekijk IP-adressen van alle netwerkadapters (classic)          | `ifconfig`                           |
 | Overzicht tonen van alle actieve netwerkpoorten                                  | `sudo ss -tlnp`      |
-
-
+|                                   |       |
+|                                   |       |
 | Bekijk de status van een service                       | `systemctl status SERVICE`       |
 | Start een service                                      | `sudo systemctl start SERVICE`   |
 | Stop een service                                       | `sudo systemctl stop SERVICE`    |
 | Herstart een service                                   | `sudo systemctl restart SERVICE` |
 | Zet een service aan                                     | `sudo systemctl enable SERVICE`   |
-
+|                                   |       |
 | Update de package repositories (Ubuntu & Debian based) | `sudo apt update`                |
 | Installeer een package (Ubuntu & Debian based)         | `sudo apt install PACKAGE`       |
 | Installeer applicatie via brew                         | `brew install APPLICATIE`        |
@@ -25,20 +25,21 @@
 | Verwijder bestand                                      | `rm BESTANDNAAM`                 |
 | Gedownloade pakket installeren                                  | `sudo dpkg -i BESTANDNAAM.deb`      |
 | Bestand aanpassen via nano                                  | `sudo nano PAD/NAAR/BESTAND`      |
-
-
-
+|                                   |       |
+|                                   |       |
+|                                   |       |
 | Automatische schermvergrendeling                                  | `gsettings set org.gnome.desktop.screensaver lock-enabled false`     |
-
-
+|                                   |       |
+|                                   |       |
 | MySQL Console openen (omdat de root gebruiker nu een wachtwoord heeft)           | `mysql -u root -p`                      |
 | Start de MySQL interactieve shell                                   | `sudo mysql`      |
-
-
+|                                   |       |
+|                                   |       |
+|                                   |       |
 | Inloggen vanaf je fysieke systeem via ssh naar VM                                      | `ssh USERNAME@IP-ADRESS`                 |
-
+|                                   |       |
 | Verander wachtwoord                                  | `passwd`      |
-
+|                                   |       |
 | Systeem afsluiten                                  | `sudo poweroff`      |
 
 
