@@ -59,7 +59,7 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Vet | `**tekst**` | **tekst** |
 | Cursief | `*tekst*` | *tekst* |
 
-#fail2ban
+# fail2ban
 | Taak                                                   | Commando                          |
 | :----------------------------------------------------- | :-------------------------------  |
 | Geconfigureerde jails bekijken                         | `sudo fail2ban-client status`     |
