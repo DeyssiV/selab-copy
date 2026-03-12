@@ -46,8 +46,30 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Controleer MySQL service status               | `systemctl status mysql`                      |
 | Nieuwe gebruiker met externe toegang          |`CREATE USER 'user'@'%' IDENTIFIED BY 'pass';` |
 
+## Hydra & Fail2Ban
+
+| Taak                                     | Commando                                                          |
+| :----------------------------------------| :-----------------------------------------------------------------|
+| Controleer mislukte SSH logins via logs  | `sudo tail -f /var/log/auth.log`                                  |
+| Check Fail2Ban status voor SSH           | `sudo fail2ban-client status sshd`                                |
+| Unban een geblokkeerd IP                 | `sudo fail2ban-client set sshd unbanip <IP>`                      |
+| Hydra brute-force test op SSH            | `hydra -t 4 -l <USER> -P passwords.txt ssh://<VM-IP>`             |
+
+
+
+## Docker & Heimdall (zonder database)
+
+| Taak                                      | Commando                                                         |
+| :-----------------------------------------| :--------------------------------------------------------------- |
+| Run Heimdall container                    | `docker run -d -p 3000:80 --name heimdall linuxserver/heimdall`  |
+| Check draaiende containers                | `docker ps`                                                      |
+| Stop een container                        | `docker stop <CONTAINER>`                                        |
+| Verwijder een container                   | `docker rm -f <CONTAINER>`                                       |
+
 ## Checklist netwerkconfiguratie
 
 1. Is het IP-adres correct? `ip a`
 2. Is de router/default gateway correct? `ip r -n`
 3. Luistert MySQL op de juiste interface? `sudo ss -tlnp | grep 3306`
+4. Is Fail2Ban actief en blokkeert het mislukte logins? `sudo fail2ban-client status sshd`
+5. Werkt Heimdall dashboard in browser? `http://192.168.56.20>:3000`
