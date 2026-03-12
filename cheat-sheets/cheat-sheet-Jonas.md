@@ -58,6 +58,7 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Subtitel | `## Subtitel` | Kleinere titel |
 | Vet | `**tekst**` | **tekst** |
 | Cursief | `*tekst*` | *tekst* |
+
 #fail2ban
 | Taak                                                   | Commando                          |
 | :----------------------------------------------------- | :-------------------------------  |
