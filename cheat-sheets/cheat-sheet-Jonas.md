@@ -58,6 +58,15 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Subtitel | `## Subtitel` | Kleinere titel |
 | Vet | `**tekst**` | **tekst** |
 | Cursief | `*tekst*` | *tekst* |
+#fail2ban
+| Taak                                                   | Commando                          |
+| :----------------------------------------------------- | :-------------------------------  |
+| Geconfigureerde jails bekijken                         | `sudo fail2ban-client status`     |
+| Geblokkeerde IP-adressen bekijken                      | `sudo fail2ban-client status sshd`|
+| findtime opvragen                                      | `sudo fail2ban-client get status sshd findtime`    |
+| maxretry opvragen                                      | `sudo fail2ban-client get status sshd maxretry`     |
+| bantime  opvragen                                 | `sudo fail2ban-client get status sshd bantime`  |
+| een Ip-adres unbannen                                  | `sudo fail2ban-client set sshd unbanip <IP-adres>` |
 | Lijst | `- item` | • item |
 | Codeblok | ```` ```bash ... ``` ```` | Code met kleur |
 | Link | `[naam](https://...)` | klikbare link |
