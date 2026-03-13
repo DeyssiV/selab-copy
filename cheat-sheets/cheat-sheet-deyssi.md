@@ -10,6 +10,16 @@
 | Bekijk IP-adressen van alle netwerkadapters (classic)          | `ifconfig`                           |
 | Overzicht tonen van alle actieve netwerkpoorten                                  | `sudo ss -tlnp`      |
 |                                   |       |
+| Schakelt de firewall in                                 | `sudo ufw enable`      |
+| Toont of de firewall momenteel actief + overzicht alle netwerkports              | `sudo ufw status`      |
+|                                   |       |
+|                                   |       |
+| FAIL2BAN: Zien welke jails geconfigureerd zijn                                  |  `sudo fail2ban-client status`     |
+| FAIL2BAN: Zien welke IP-adressen geblokkeerd zijn                               |  `sudo fail2ban-client status sshd`     |
+| FAIL2BAN: De findtime, maxretry en bantime opvragen van de sshd jail                          |  `sudo fail2ban-client get sshd findtime/maxretry/bantime`   |
+| FAIL2BAN: Jouw IP-adres terug vrijmaken zonder te wachten tot de blokkeertijd verlopen is      | `sudo fail2ban-client unban IP-ADRES`    |
+|                                   |       |
+|                                   |       |
 |                                   |       |
 | Bekijk de status van een service                       | `systemctl status SERVICE`       |
 | Start een service                                      | `sudo systemctl start SERVICE`   |
