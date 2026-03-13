@@ -50,9 +50,9 @@ Je kan dit vinden met `systemctl status fail2ban`, als er dan enabled staat wil 
 | :----------------------------------------------------- | :-------------------------------  |
 | Geconfigureerde jails bekijken                         | `sudo fail2ban-client status`     |
 | Geblokkeerde IP-adressen bekijken                      | `sudo fail2ban-client status sshd`|
-| findtime opvragen                                      | `sudo fail2ban-client get status sshd findtime`    |
-| maxretry opvragen                                      | `sudo fail2ban-client get status sshd maxretry`     |
-| bantime  opvragen                                 | `sudo fail2ban-client get status sshd bantime`  |
+| findtime opvragen                                      | `sudo fail2ban-client get sshd findtime`    |
+| maxretry opvragen                                      | `sudo fail2ban-client get sshd maxretry`     |
+| bantime  opvragen                                 | `sudo fail2ban-client get sshd bantime`  |
 | een Ip-adres unbannen                                  | `sudo fail2ban-client set sshd unbanip <IP-adres>` |
 
 
