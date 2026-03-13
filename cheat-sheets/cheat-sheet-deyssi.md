@@ -86,3 +86,23 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 1. Is het IP-adres correct? `ip a`/ `ifconfig`
 2. Is de router/default gateway correct? `ip r -n`
 3. Is een DNS-server ingesteld? `cat /etc/resolv.conf`
+
+
+# Wachtwoordkluis
+
+| **Variabele**                    | **Inhoud**                                                                                                                |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Resourcegroep                    | SELab-Wordpress                                                                                                           |
+| Naam databankserver              | \<initialen\>-wordpressdb (bv. "ta-wordpressdb")                                                                          |
+| DNS-naam databankserver          | bv. "ta-wordpressdb.mysql.database.azure.com"<br />(terug te vinden op de overzichtspagina van de machine in Azure)       |
+| Beheerder databankserver         | wordpressdb                                                                                                               |
+| Wachtwoord databankserver        | \*\*\*\*\* (bv. "LetmeIn!")                                                                                               |
+| Naam applicatieserver (Ubuntu)   | bv. "ta-wordpressapp"                                                                                                     |
+| DNS-naam applicatieserver        | bv. "ta-wordpressapp.westeurope.cloudapp.azure.com"<br />(terug te vinden op de overzichtspagina van de machine in Azure) |
+| Gebruikersnaam applicatieserver  | wordpressapp                                                                                                              |
+| Wachtwoord applicatieserver      | \*\*\*\*\* (bv. "LetmeIntheApp!")                                                                                         |
+| WordPress db user                | bv. "wordpress"                                                                                                           |
+| Wachtwoord van WordPress db user | bv. "wordpresspwd"                                                                                                        |
+| WordPress user                   | admin                                                                                                                     |
+| WordPress user password          | Srro@H%E@1iKllIZUj (gegenereerd)                                                                                          |
+
