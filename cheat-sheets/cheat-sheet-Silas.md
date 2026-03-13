@@ -18,6 +18,7 @@
 | voortwaarts zoeken                                     | `/`                              |
 | achterwaarts zoeken                                    | `?`                              |
 | volgend zoekresultaat                                  | `n`                              |
+| connecten met ssh                                      | `ssh <username>@<ip-adres>`      |
 
 ## Git workflow
 
@@ -56,12 +57,36 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | controleer of service draait                           | `systemctl status mysql`                             |
 | controleer welke netwerkpoorten in gebruik zijn        | `sudo ss -tlnp`                                      |
 | herstart mysql                                         | `sudo systemctl restart mysql`                       |
-| filteren op poorten die luisteren voor een prcoes      | `sudo lsof -p [PID] \| grep LISTEN`                  |
+| filteren op poorten die luisteren voor een proces      | `sudo lsof -p [PID] \| grep LISTEN`                  |
 | systeem logs bekijken                                  | `journalctl -u mysqld`                               |
 | Start SSH                                              | `sudo systemctl start ssh`                           |
 | start mysql console                                    | `sudo mysql -u root -p`                              |
 | use mysql                                              | `use mysql`                                          |
 | maak gebruiker                                         | `create user 'admin'@'%' identified by 'letmein';`   |
+
+## Fail2ban & UFW
+|Taak                                                    | Commando                                             |
+|:------------------------------------------------------ | :----------------------                              |
+| check firewall actief + toegelaten poorten             | `sudo ufw status`                                    |
+| allow poort                                            | `sudo ufw allow <poort>`                             |
+| deny poort                                             | `sudo ufw deny <poort>`                              |
+| Geconfigureerde jails bekijken                         | `sudo fail2ban-client status`                        |
+| Geblokkeerde IP-adressen bekijken                      | `sudo fail2ban-client status sshd`                   |
+| findtime opvragen                                      | `sudo fail2ban-client get sshd findtime`             |
+| maxretry opvragen                                      | `sudo fail2ban-client get sshd maxretry`             |
+| bantime opvragen                                       | `sudo fail2ban-client get sshd bantime`              |
+| een Ip-adres unbannen                                  | `sudo fail2ban-client set sshd unbanip <IP-adres>`   |
+| start mysql console                                    | `sudo mysql -u root -p`                              |
+| use mysql                                              | `use mysql`                                          |
+| maak gebruiker                                         | `create user 'admin'@'%' identified by 'letmein';`   |
+
+## Hydra
+|Taak                                                    | Commando                                                                               |
+|:------------------------------------------------------ | :----------------------                                                                |
+| bruteforce test met gekend wachtwoord                  | `hydra -l <username> -p <wachtwoord> <ip adres> -t 4 ssh`                              |
+| bruteforce aanval met wordlist                         | `hydra -l osboxes -P /home/osboxes/Downloads/passlist.txt 192.168.56.20 -t 4 ssh`      |
+
+
 
 ## Checklist netwerkconfiguratie
 
