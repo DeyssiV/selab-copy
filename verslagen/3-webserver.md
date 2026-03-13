@@ -1,6 +1,6 @@
 # Verslag: 3-webserver
 
-> Naam verslaggever: Jonas De Reyse
+> Naam verslaggever: Jonas De Reuse
 
 ## Beschrijving
 
@@ -65,21 +65,21 @@ Je kan dit vinden met `systemctl status fail2ban`, als er dan enabled staat wil 
 
 Toon na het afronden het resultaat aan je begeleider. Elk teamlid moet in staat zijn om het resultaat te demonstreren bij de oplevering van deze opdracht! Criteria voor beoordeling:
 
-- [ ] Je kan de VM opstarten.
-- [ ] Je kan met WinSCP/Cyberduck bestanden naar de Document Root kopiëren.
-- [ ] De website is zichtbaar via https://192.168.56.20.
-- [ ] De firewall is actief en de juiste poorten zijn toegelaten:
-- [ ] SSH/SFTP werkt nog.
-- [ ] MySQL Workbench kan verbinden.
-- [ ] De website blijft bereikbaar.
-- [ ] Fail2ban is actief.
-- [ ] De inhoud van jail.local kan getoond en toegelicht worden.
-- [ ] De waarden van findtime, maxretry en bantime kunnen getoond worden.
-- [ ] Fail2ban blokkeert jouw IP na te veel foutieve SSH‑pogingen.
-- [ ] Een whitelisted IP wordt niet geblokkeerd.
-- [ ] Er is een verslag gemaakt volgens het template.
-- [ ] Elk teamlid heeft de cheat sheet aangevuld.
-- [ ] Alle ❓-vragen zijn correct beantwoord.
+- [X] Je kan de VM opstarten.
+- [X] Je kan met WinSCP/Cyberduck bestanden naar de Document Root kopiëren.
+- [X] De website is zichtbaar via https://192.168.56.20.
+- [X] De firewall is actief en de juiste poorten zijn toegelaten:
+- [X] SSH/SFTP werkt nog.
+- [X] MySQL Workbench kan verbinden.
+- [X] De website blijft bereikbaar.
+- [X] Fail2ban is actief.
+- [X] De inhoud van jail.local kan getoond en toegelicht worden.
+- [X] De waarden van findtime, maxretry en bantime kunnen getoond worden.
+- [X] Fail2ban blokkeert jouw IP na te veel foutieve SSH‑pogingen.
+- [X] Een whitelisted IP wordt niet geblokkeerd.
+- [X] Er is een verslag gemaakt volgens het template.
+- [X] Elk teamlid heeft de cheat sheet aangevuld.
+- [X] Alle ❓-vragen zijn correct beantwoord.
 
 
 ## Problemen en oplossingen
