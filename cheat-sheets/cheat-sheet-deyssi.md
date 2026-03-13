@@ -17,7 +17,7 @@
 | FAIL2BAN: Zien welke jails geconfigureerd zijn                                  |  `sudo fail2ban-client status`     |
 | FAIL2BAN: Zien welke IP-adressen geblokkeerd zijn                               |  `sudo fail2ban-client status sshd`     |
 | FAIL2BAN: De findtime, maxretry en bantime opvragen van de sshd jail                          |  `sudo fail2ban-client get sshd findtime/maxretry/bantime`   |
-| FAIL2BAN: Jouw IP-adres terug vrijmaken zonder te wachten tot de blokkeertijd verlopen is      | `sudo fail2ban-client unban IP-ADRES`    |
+| FAIL2BAN: Jouw IP-adres terug vrijmaken zonder te wachten tot de blokkeertijd verlopen is      | `sudo fail2ban-client set sshd unbanip IP-adres`    |
 |                                   |       |
 |                                   |       |
 |                                   |       |
