@@ -76,9 +76,6 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | maxretry opvragen                                      | `sudo fail2ban-client get sshd maxretry`             |
 | bantime opvragen                                       | `sudo fail2ban-client get sshd bantime`              |
 | een Ip-adres unbannen                                  | `sudo fail2ban-client set sshd unbanip <IP-adres>`   |
-| start mysql console                                    | `sudo mysql -u root -p`                              |
-| use mysql                                              | `use mysql`                                          |
-| maak gebruiker                                         | `create user 'admin'@'%' identified by 'letmein';`   |
 
 ## Hydra
 |Taak                                                    | Commando                                                                               |
