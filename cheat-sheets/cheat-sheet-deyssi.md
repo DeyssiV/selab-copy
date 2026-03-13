@@ -12,6 +12,7 @@
 |                                   |       |
 | Schakelt de firewall in                                 | `sudo ufw enable`      |
 | Toont of de firewall momenteel actief + overzicht alle netwerkports              | `sudo ufw status`      |
+| IP adres whitelisten              | `sudo ufw allow from IP_address`      |
 |                                   |       |
 |                                   |       |
 | FAIL2BAN: Zien welke jails geconfigureerd zijn                                  |  `sudo fail2ban-client status`     |
