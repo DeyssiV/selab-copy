@@ -66,6 +66,24 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Stop een container                        | `docker stop <CONTAINER>`                                        |
 | Verwijder een container                   | `docker rm -f <CONTAINER>`                                       |
 
+## Microsoft Azure
+
+| **Variabele**                    | **Inhoud**                                                                                                                |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Resourcegroep                    | SELab-Wordpress                                                                                                           |
+| Naam databankserver              | la-wordpressdb                                                                                                            |
+| DNS-naam databankserver          | bv. "ta-wordpressdb.mysql.database.azure.com"<br />(terug te vinden op de overzichtspagina van de machine in Azure)       |
+| Beheerder databankserver         | wordpressdb                                                                                                               |
+| Wachtwoord databankserver        | ww wordpressdb                                                                                                            |
+| Naam applicatieserver (Ubuntu)   | bv. "ta-wordpressapp"                                                                                                     |
+| DNS-naam applicatieserver        | bv. "ta-wordpressapp.westeurope.cloudapp.azure.com"<br />(terug te vinden op de overzichtspagina van de machine in Azure) |
+| Gebruikersnaam applicatieserver  | wordpressapp                                                                                                              |
+| Wachtwoord applicatieserver      | x                                                                                                                         |
+| WordPress db user                | bv. "wordpress"                                                                                                           |
+| Wachtwoord van WordPress db user | x                                                                                                                         |
+| WordPress user                   | admin                                                                                                                     |
+| WordPress user password          | x                                                                                                                         |
+
 ## Checklist netwerkconfiguratie
 
 1. Is het IP-adres correct? `ip a`
