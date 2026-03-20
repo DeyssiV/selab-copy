@@ -83,6 +83,24 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | bruteforce test met gekend wachtwoord                  | `hydra -l <username> -p <wachtwoord> <ip adres> -t 4 ssh`                              |
 | bruteforce aanval met wordlist                         | `hydra -l osboxes -P /home/osboxes/Downloads/passlist.txt 192.168.56.20 -t 4 ssh`      |
 
+## Azure-Wordpress gegevens
+| **Variabele**                    | **Inhoud**                                                                                                                |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Resourcegroep                    | SELab-Wordpress                                                                                                           |
+| Naam databankserver              | sp-wordpressdb                                                                                                            |
+| DNS-naam databankserver          | sp-wordpressdb.mysql.database.azure.com                                                                                   |
+| Beheerder databankserver         | wordpressdb                                                                                                               |
+| Wachtwoord databankserver        | LetmeIn!                                                                                                                  |
+| Naam applicatieserver (Ubuntu)   | sp-wordpressapp                                                                                                           |      
+| DNS-naam applicatieserver        | sp-wordpressapp.switzerlandnorth.cloudapp.azure.com                                                                       |
+| Gebruikersnaam applicatieserver  | wordpressapp                                                                                                              |
+| Wachtwoord applicatieserver      | LetmeIntheApp!                                                                                                            |
+| WordPress db user                | wordpress                                                                                                                 |
+| Wachtwoord van WordPress db user | wordpresspwd                                                                                                              |
+| WordPress user                   | admin                                                                                                                     |
+| WordPress user password          | 3&KfZJUZVA%2PTE1cs                                                                                                        |
+
+
 
 
 ## Checklist netwerkconfiguratie
