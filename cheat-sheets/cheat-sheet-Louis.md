@@ -68,21 +68,21 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 
 ## Microsoft Azure
 
-| **Variabele**                    | **Inhoud**                                                                                                                |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Resourcegroep                    | SELab-Wordpress                                                                                                           |
-| Naam databankserver              | la-wordpressdb                                                                                                            |
-| DNS-naam databankserver          | bv. "ta-wordpressdb.mysql.database.azure.com"<br />(terug te vinden op de overzichtspagina van de machine in Azure)       |
-| Beheerder databankserver         | wordpressdb                                                                                                               |
-| Wachtwoord databankserver        | ww wordpressdb                                                                                                            |
-| Naam applicatieserver (Ubuntu)   | bv. "ta-wordpressapp"                                                                                                     |
-| DNS-naam applicatieserver        | bv. "ta-wordpressapp.westeurope.cloudapp.azure.com"<br />(terug te vinden op de overzichtspagina van de machine in Azure) |
-| Gebruikersnaam applicatieserver  | wordpressapp                                                                                                              |
-| Wachtwoord applicatieserver      | x                                                                                                                         |
-| WordPress db user                | bv. "wordpress"                                                                                                           |
-| Wachtwoord van WordPress db user | x                                                                                                                         |
-| WordPress user                   | admin                                                                                                                     |
-| WordPress user password          | x                                                                                                                         |
+  | **Variabele**                    | **Inhoud**                                                                                                                |
+  | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+  | Resourcegroep                    | SELab-Wordpress                                                                                                           |
+  | Naam databankserver              | la-wordpressdb2                                                                                                           |
+  | DNS-naam databankserver          | la-wordpressdb2.mysql.database.azure.com                                                                                  |
+  | Beheerder databankserver         | wordpressdb                                                                                                               |
+  | Wachtwoord databankserver        | ww wordpressdb                                                                                                            |
+  | Naam applicatieserver (Ubuntu)   | wordpressdb                                                                                                               |
+  | DNS-naam applicatieserver        | wordpressdb.norwayeast.cloudapp.azure.com                                                                                 |
+  | Gebruikersnaam applicatieserver  | wordpressapp                                                                                                              |
+  | Wachtwoord applicatieserver      | app ww                                                                                                                    |
+  | WordPress db user                | wordpress                                                                                                                 |
+  | Wachtwoord van WordPress db user | wordpress in db ww                                                                                                        |
+  | WordPress user                   | admin                                                                                                                     |
+  | WordPress user password          | x                                                                                                                         |
 
 ## Checklist netwerkconfiguratie
 
