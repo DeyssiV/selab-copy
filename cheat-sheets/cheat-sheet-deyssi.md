@@ -95,8 +95,8 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Resourcegroep                    | SELab-Wordpress                                                                                                           |
 | Naam databankserver              | dv-wordpressdb                                                                          |
 | DNS-naam databankserver          | bv. "ta-wordpressdb.mysql.database.azure.com"<br />(terug te vinden op de overzichtspagina van de machine in Azure)       |
-| Beheerder databankserver         | wordpressdb                                                                                                               |
-| Wachtwoord databankserver        | 4gQPqduaXd4hGBZ                                                                                               |
+| Beheerder databankserver         | deyssi                                                                                                               |
+| Wachtwoord databankserver        | KihlEhb@05                                                                                               |
 | Naam applicatieserver (Ubuntu)   | bv. "ta-wordpressapp"                                                                                                     |
 | DNS-naam applicatieserver        | bv. "ta-wordpressapp.westeurope.cloudapp.azure.com"<br />(terug te vinden op de overzichtspagina van de machine in Azure) |
 | Gebruikersnaam applicatieserver  | wordpressapp                                                                                                              |
