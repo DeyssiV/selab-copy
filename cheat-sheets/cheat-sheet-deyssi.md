@@ -99,8 +99,8 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Wachtwoord databankserver        | KihlEhb@05                                                                                               |
 | Naam applicatieserver (Ubuntu)   | bv. "ta-wordpressapp"                                                                                                     |
 | DNS-naam applicatieserver        | bv. "ta-wordpressapp.westeurope.cloudapp.azure.com"<br />(terug te vinden op de overzichtspagina van de machine in Azure) |
-| Gebruikersnaam applicatieserver  | wordpressapp                                                                                                              |
-| Wachtwoord applicatieserver      | \*\*\*\*\* (bv. "LetmeIntheApp!")                                                                                         |
+| Gebruikersnaam applicatieserver  | deyssi                                                                                                              |
+| Wachtwoord applicatieserver      | KihlEhb@0512                                                                                         |
 | WordPress db user                | bv. "wordpress"                                                                                                           |
 | Wachtwoord van WordPress db user | bv. "wordpresspwd"                                                                                                        |
 | WordPress user                   | admin                                                                                                                     |
