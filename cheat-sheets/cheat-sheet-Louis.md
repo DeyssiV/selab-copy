@@ -83,6 +83,11 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
   | Wachtwoord van WordPress db user | wordpress in db ww                                                                                                        |
   | WordPress user                   | admin                                                                                                                     |
   | WordPress user password          | x                                                                                                                         |
+  | verbinden met VM                 | ssh wordpressapp@20.251.13.140                                                                                            |
+  | verbinden met SQL Database       | mysql -h la-wordpressdb2.mysql.database.azure.com -u wordpressdb -p                                                       |
+  
+
+
 
 ## Checklist netwerkconfiguratie
 
