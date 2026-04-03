@@ -100,6 +100,16 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | WordPress user                   | admin                                                                                                                     |
 | WordPress user password          | 3&KfZJUZVA%2PTE1cs                                                                                                        |
 
+## Docker
+| **Variabele**                    | **Inhoud**                                                                                                                |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| docker ps                        | Toon actieve containers                                                                                                   |
+| docker run                       | run een nieuwe container                                                                                                  |
+| docker images                    | toon images                                                                                                               |
+| docker system prune -a --volumes | verwijder inactieve images en containers                                                                                  |
+| docker compose up                | zoek naar docker-compose.yml in huidige map en run die                                                                    |
+| docker compose down              | stop en verwijder containers die gestart zien door docker-compose.yml bestand in huidige map                              |      
+
 
 
 
