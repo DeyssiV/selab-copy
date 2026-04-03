@@ -1,7 +1,6 @@
 # Verslag: Opdracht 1 - Package Manager & Markdown
 
-> Naam verslaggever: Deyssi Vedzijeva, Louis Appeltants, Jonas De Reuse, Silas Pauwels, Alpay Cakal
-
+> Naam verslaggever: Deyssi Vedzijeva
 ## Beschrijving
 
 We moesten leren werken met de package manager van ons besturingssysteem om het beheren en downloaden van software sneller en efficiënter te laten verlopen. Bovendien is het ook de bedoeling dat we leren werken met Markdown om documentatie in de toekomst te vergemakkelijken.
