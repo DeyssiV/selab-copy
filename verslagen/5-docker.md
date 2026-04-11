@@ -94,11 +94,12 @@ Oplossing: Ik heb de lokale service gestopt met sudo systemctl stop mysql en uit
 ## Voorbereiding demo
 
 Tijdens de demo laat ik zien dat mijn VM schoon is van oude installaties. Ik toon de verschillende mappen (~/vaultwarden-compose, ~/portainer-compose, etc.) en laat zien hoe ik met docker compose up -d een volledige service in de lucht breng.
-Daarnaast surf ik naar Portainer om aan te tonen dat alle containers (inclusief de database en de webserver) centraal beheerd worden. Als extraatje laat ik de Minetest server zien en leg ik uit dat dit een dedicated server is: een machine die enkel de spelwereld host zonder dat er zelf op gespeeld wordt.
+Daarnaast surf ik naar Portainer om aan te tonen dat alle containers (inclusief de database en de webserver) centraal beheerd worden. 
+Als extraatje laat ik de Minetest server zien en leg ik uit dat dit een dedicated server is: een machine die enkel de spelwereld host zonder dat er zelf op gespeeld wordt.
 
 ## Reflecties
 
-Deze opdracht was zeer leerrijk omdat het de brug slaat tussen pure systeembeheer (Linux) en moderne applicatie-deployment. Het omvormen van lange docker run commando's naar overzichtelijke YAML-bestanden maakte duidelijk waarom Docker Compose de standaard is in de industrie. Het koppelen van een webserver aan een database-container (de Azure-uitbreiding) was het meest uitdagende maar ook het meest waardevolle deel.
+
 
 ## Bronnen
 Docker Documentation. (z.d.). Docker Compose Overview. https://docs.docker.com/compose/
