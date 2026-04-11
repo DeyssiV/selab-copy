@@ -85,7 +85,7 @@ Unused images zijn images die wel een naam hebben, maar niet gekoppeld zijn aan 
 
 ## Problemen en oplossingen
 
-###Probleem 1 - Poortconflicten (Address already in use)
+Probleem 1 - Poortconflicten (Address already in use)
 Bij het opstarten van de MySQL-container via Docker kreeg ik de melding dat poort 3306 al bezet was. Dit kwam doordat er nog een lokale MySQL-service draaide uit een vorige opdracht. 
 
 Oplossing: Ik heb de lokale service gestopt met sudo systemctl stop mysql en uitgeschakeld met disable, zodat de Docker-container de poort kon overnemen.
