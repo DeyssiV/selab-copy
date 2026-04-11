@@ -1,4 +1,4 @@
-# Verslag: Opdracht 1 - Package Manager & Markdown
+# Verslag: 1-Package Manager & Markdown
 
 > Naam verslaggever: Deyssi Vedzijeva
 ## Beschrijving
