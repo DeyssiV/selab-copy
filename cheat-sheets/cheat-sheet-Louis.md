@@ -55,7 +55,26 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | Unban een geblokkeerd IP                 | `sudo fail2ban-client set sshd unbanip <IP>`                      |
 | Hydra brute-force test op SSH            | `hydra -t 4 -l <USER> -P passwords.txt ssh://<VM-IP>`             |
 
+## Docker & Containerbeheer
 
+| Taak | Commando |
+| :--- | :--- |
+| Run een losse container                  | `docker run -d -p 3000:80 --name <NAAM> <IMAGE>` |
+| Check draaiende containers               | `docker ps`                                      |
+| Check alle containers (ook gestopte)     | `docker ps -a`                                   |
+| Stop een container                       | `docker stop <CONTAINER>`                        |
+| Verwijder een container                  | `docker rm -f <CONTAINER>`                       |
+| Bekijk live logs van een container       | `docker logs -f <CONTAINER>`                     |
+| Verwijder ongebruikte data/images        | `docker system prune -a`                         |
+
+## Docker Compose (YAML-gebaseerd)
+
+| Taak | Commando |
+| :--- | :--- |
+| Start alles in de huidige map (achtergrond) | `docker compose up -d`              |
+| Stop en verwijder alles uit compose         | `docker compose down`               |
+| Herstart een specifieke service             | `docker compose restart <SERVICE>`  |
+| Controleer config op fouten                 | `docker compose config`             |
 
 ## Docker & Heimdall (zonder database)
 
