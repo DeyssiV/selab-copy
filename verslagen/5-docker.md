@@ -5,62 +5,89 @@
 
 In deze opdracht hebben we geleerd met Docker en Docker Compose te werken. Het doel was om applicaties te virtualiseren in Docker. We hebben eigen password manager (Vaultwarden) opgezet en beheerpaneel Portainer. Daarnaast hebben we ook commando's overzichtelijke in YAML-bestanden voor Docker Compose kunnen insteken.
 
-## Antwoorden op de vragen in de opdracht
+### Antwoorden op de vragen in de opdracht
 
-### Vraag 1 - Wat is ${USER}?
+#### Stap 1 - Installatie Docker in een VM
+
+:question: Wat is ${USER}?
 
 Dit is een omgevingsvariabele in Linux die de naam bevat van de huidige ingelogde gebruiker.
 
-### Vraag 2 - Welk commando kan je gebruiken om jouw gebruikersnaam te bepalen?
+:question: Welk commando kan je gebruiken om jouw gebruikersnaam te bepalen?
 
-whoami 
+```whoami```
+ 
 
-### Vraag 3 - Welke commando's gebruik je hiervoor?
+#### Stap 2 - Installatie Vaultwarden
 
-Eerst docker pull vaultwarden/server en daarna docker run met de nodige -p (ports), -v (volumes) en -e (environment) parameters.
+:question: Welke commando's gebruik je hiervoor?
 
-### Vraag 4 - Wat doet het docker pull commando?
+Eerst ```docker pull vaultwarden/server``` en daarna ```docker run``` met de nodige ```-p``` (ports), ```-v``` (volumes) en ```-e``` (environment) parameters.
+
+:question: Wat doet het ```docker pull``` commando?
 
 Dit downloadt de gewenste image van Docker Hub naar je lokale machine.
 
-### Vraag 5 - Hoe kan je alle lokale images bekijken?
-docker images
+:question: Hoe kan je alle lokale images bekijken?
 
-### Vraag 6 - Hoe bekijk je alle lokaal draaiende containers?
-docker ps
+```docker images```
 
-### Vraag 7 - Hoe bekijk je alle containers (incl gestopte)?
-docker ps -a
+:question: Hoe bekijk je alle lokaal draaiende containers?
 
-### Vraag 8 - Waarom heeft Vaultwarden HTTPS nodig?
+```docker ps```
+
+:question: Hoe bekijk je alle lokale containers (incl. de gestopte containers)?
+
+```docker ps -a```
+
+:question: Vaultwarden heeft HTTPS nodig om goed te functioneren. Waarom heeft Vaultwarden HTTPS nodig?
+
 Omdat moderne browsers (zoals Chrome en Firefox) geen toegang geven tot de Crypto-API's (nodig voor het versleutelen van wachtwoorden) via een onveilige HTTP-verbinding.
 
-### Vraag 9 - Waar bevinden de paden uit de ROCKET_TLS variabele zich?
+:question: Waar bevinden de paden uit deze environment variabele (ROCKET_TLS) zich? Is dit op de host of in de container?
+
 Deze bevinden zich in de container. De certificaten worden via een volume gemount van de host naar deze interne paden.
 
-### Vraag 10 - Welke commando's gebruik je hiervoor?
+#### Stap 3 - Installatie Portainer
+
+:question: Welke commando's gebruik je hiervoor?
+
+```
 docker run -d -p 9443:9443 
 --name portainer 
 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v ~/.files-portainer:/data portainer/portainer-ce:latest
+```
 
-### Vraag 11 - Wat is het verschil tussen een volume en een bind mount?
-Een volume wordt volledig beheerd door Docker zelf in een specifieke map. Een bind mount is een directe koppeling naar een zelfgekozen map op je eigen bestandssysteem (zoals ~/.files-portainer)
+:question: Hoe stel je dit in? Wat is het verschil tussen een Docker volume (= volume) en een map op jouw VM gemount als volume (= bind mount)?
 
-### Vraag 12 - Kan je Vaultwarden afsluiten en opstarten via Portainer?
+Een volume wordt volledig beheerd door Docker zelf in een specifieke map. Een bind mount is een directe koppeling naar een zelfgekozen map op je eigen bestandssysteem (zoals ```~/.files-portainer```)
+
+:question: Kan je de Vaultwarden afsluiten en terug opstarten via Portainer?
+
 Ja, via de "Containers" sectie in het Portainer dashboard kun je containers selecteren en acties zoals Start, Stop of Kill uitvoeren.
 
-### Vraag 13 - Wat doet de -d optie?
+#### Stap 5 - Werken met een docker-compose.yml bestand
+
+:question: Wat doet de ```-d``` optie?
+
 Dit staat voor 'Detached mode'. Het zorgt ervoor dat de container op de achtergrond draait en de terminal weer vrijgeeft.
- ### Vraag 14 - Is een enkel docker-compose.yml bestand voor beide verstandig?
+
+:question: Je maakt een enkel docker-compose.yml bestand met daarin beide containers in. Is dit verstandig? Waarom wel of niet?
+
 Nee, dit is meestal niet verstandig. Als je ze in één bestand zet, worden ze als één 'stack' beheerd. Als je dan één applicatie wilt herstarten of verwijderen, beïnvloed je vaak ook de andere. Aparte mappen zorgen voor een betere isolatie.
 
-### Vraag 15 - Hoe verwijder je eenvoudig alle containers uit een .yml bestand?
-docker compose down
+:question: Hoe verwijder je eenvoudig alle containers uit een docker-compose.yml bestand zonder gebruik te maken van ```docker stop``` en ```docker rm```?
 
-### Vraag 16 - Hoe kan je alles in één keer verwijderen?
-sudo docker system prune -a --volumes
+```docker compose down```
 
-### Vraag 17 - Wat is het verschil tussen unused en dangling images?
+#### Stap 6 - Opruimen
+
+:question: Hoe kan je met één commando alle containers, images, networks en volumes verwijderen die niet meer in gebruik zijn?
+
+```sudo docker system prune -a --volumes```
+
+:question: Je zal in de documentatie "unused images" en "dangling images" tegenkomen. Wat is het verschil tussen beide?
+
 Dangling images zijn images zonder naam of tag (gecreëerd tijdens updates). 
 Unused images zijn images die wel een naam hebben, maar niet gekoppeld zijn aan een actieve container.
 
@@ -85,20 +112,20 @@ Unused images zijn images die wel een naam hebben, maar niet gekoppeld zijn aan 
 
 ## Problemen en oplossingen
 
-Probleem 1 - Poortconflicten (Address already in use)
+#### Probleem 1 - Poortconflicten (Address already in use)
+
 Bij het opstarten van de MySQL-container via Docker kreeg ik de melding dat poort 3306 al bezet was. Dit kwam doordat er nog een lokale MySQL-service draaide uit een vorige opdracht. 
 
-Oplossing: Ik heb de lokale service gestopt met sudo systemctl stop mysql en uitgeschakeld met disable, zodat de Docker-container de poort kon overnemen.
+#### Oplossing: 
+Ik heb de lokale service gestopt met `sudo systemctl stop mysql` en uitgeschakeld met `disable`, zodat de Docker-container de poort kon overnemen.
 
 
 ## Voorbereiding demo
+We kunnen controleren of de containers vaultwarden en portainer de status "Running" hebben in het Portainer dashboard. Ook de webinterface is bereikbaar op eigen host via IP-adres van VM. De Bitwarden-extensie in browser is gekoppeld aan Vaultwarden-server met een self-signed certificate. Bovendien als we een wachtwoord in de kluis maken is het ook zichtbaar in de extensie. 
 
-Tijdens de demo laat ik zien dat mijn VM schoon is van oude installaties. Ik toon de verschillende mappen (~/vaultwarden-compose, ~/portainer-compose, etc.) en laat zien hoe ik met docker compose up -d een volledige service in de lucht breng.
-Daarnaast surf ik naar Portainer om aan te tonen dat alle containers (inclusief de database en de webserver) centraal beheerd worden. 
-Als extraatje laat ik de Minetest server zien en leg ik uit dat dit een dedicated server is: een machine die enkel de spelwereld host zonder dat er zelf op gespeeld wordt.
 
 ## Reflecties
-
+Door te werken met Docker en Docker Compose hebben we een een beeld gekregen van hoe containers werken en in elkaar zitten en hoe je verschillende applicaties kunt erin runnen. Daarnaast hebben we geleerd hoe een password manager zoals Vaultwarden en Portainer samenwerken om alles veilig te houden. Deze opdracht heeft ons geleerd over het beheer van applicaties binnen Docker en Docker Compose.
 
 
 ## Bronnen
