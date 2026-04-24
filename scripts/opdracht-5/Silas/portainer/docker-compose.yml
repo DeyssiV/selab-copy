@@ -1,0 +1,12 @@
+services:
+  portainer:
+    image: portainer/portainer-ce:sts
+    restart: unless-stopped
+    container_name: portainer
+    ports:
+      - 9000:8000
+      - 9443:9443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.files-portainer/data:/data
+
