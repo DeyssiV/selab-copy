@@ -1,0 +1,9 @@
+services:
+  mijn-app:
+    image: node:lts-alpine
+    container_name: mijn-app
+    working_dir: /app
+    command: sh -c "apk add git && git clone https://github.com/doublespeakgames/adarkroom.git . && npx serve ."
+    ports:
+      - 8081:3000
+    restart: always
