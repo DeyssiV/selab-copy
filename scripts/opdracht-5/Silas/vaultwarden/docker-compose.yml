@@ -1,0 +1,12 @@
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    restart: unless-stopped
+    container_name: vaultwarden
+    ports:
+      - 8000:80
+    volumes:
+      - ~/.files-vaultwarden:/data
+      - ~/.files-vaultwarden/certs:/ssl
+    environment:
+      ROCKET_TLS: "{certs=/ssl/cert.pem,key=/ssl/key.pem}"
