@@ -25,12 +25,20 @@ Omdat de database-poort (3306) dan niet open hoeft te staan voor het publieke in
 
 ## Evaluatiecriteria
 
-- [x] Apache Default Page is bereikbaar via HTTPS (443).
-- [x] WordPress is volledig hersteld op poort 8080.
-- [x] De database `appdb` is bereikbaar via MySQL Workbench over een SSH-tunnel.
-- [x] Docker-containers (Vaultwarden, Portainer, Planka) draaien en zijn bereikbaar.
-- [x] De gebruiker `admin` heeft lokaal toegang tot MySQL met het wachtwoord `letmein!`.
-- [x] Er is een nieuwe blogpost aangemaakt op de WordPress-site.
+- [x] Er is een volledig werkende virtuele machine volgens de eindsituatie.
+  - [x] De VM heeft toegang tot internet en kan gepingd worden op 192.168.56.20.
+  - [x] De webserver is beschikbaar op <https://192.168.56.20> met de nodige SFTP-mogelijkheden.
+  - [x] De databank is beschikbaar via MySQL Workbench op 192.168.56.20:3306 (`appusr letmein!`).
+  - [x] De WordPress-website is beschikbaar via <http://192.168.56.20:8080> (`wpuser letmein!`).
+  - [x] De VM is bereikbaar via SSH op 192.168.56.20:22 (`trouble shoot`).
+  - [x] De Docker services zijn correct geconfigureerd:
+    - [x] Vaultwarden is bereikbaar op <https://192.168.56.20:4123> (`troubleshoot@selabs.hogent.be shootthetrouble`).
+    - [x] Portainer is bereikbaar op <https://192.168.56.20:9443> (`admin troubleshoot`).
+    - [x] Minetest is bereikbaar op <https://192.168.56.20:30000> (`trouble shoot`).
+    - [x] Planka is bereikbaar op <http://192.168.56.20:3000> (`[trouble OF troubleshoot@selab.hogent.be] shoot`).
+- [x] Er is een verslag gemaakt op basis van de template.
+  - [x] Het verslag bevat een duidelijke beschrijving van de gevonden problemen en de oplossingen. **Per type machine is er een aparte beschrijving!**
+- [x] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
 
 ---
 
