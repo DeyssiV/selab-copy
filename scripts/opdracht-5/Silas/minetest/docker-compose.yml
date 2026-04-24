@@ -1,0 +1,15 @@
+services:
+  minetest:
+    image: lscr.io/linuxserver/luanti:latest
+    container_name: minetest
+    restart: always
+    ports:
+      - "30000:30000/udp"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+      - CLI_ARGS=--gameid minetest_game --port 30000
+    volumes:
+      - /home/osboxes/minetest/data:/config/.minetest
+
