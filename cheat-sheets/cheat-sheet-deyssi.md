@@ -105,6 +105,16 @@
 
 ---
 
+## 10. Troubleshooting
+| Taak | Commando | Toelichting |
+| :--- | :--- | :--- |
+|Interface omhoog brengen|`sudo ip link set <INTERFACE> up`|Zet een netwerkinterface handmatig in de UP-staat.|
+|Netplan toepassen|`sudo netplan apply`| Past de netwerkconfiguratie uit het YAML-bestand onmiddellijk toe.|
+|SSH socket stoppen|`sudo systemctl stop ssh.socket`|Stopt de SSH socket die anders de sshd-instellingen kan overschrijven.|
+|SSH socket uitschakelen|`sudo systemctl disable ssh.socket`| Voorkomt dat de SSH socket automatisch herstart bij het opstarten.|
+|Poort & proces check|`sudo ss -tlnp | grep <POORT>`|Controleer op welk IP-adres en poort een service luistert.|
+|Internet testen|`ping -c 3 8.8.8.8`|Stuurt 3 pakketten naar Google DNS om internetverbinding te testen.|
+
 # Wachtwoordkluis
 
 | **Variabele** | **Inhoud** |
