@@ -111,15 +111,15 @@
 | :--- | :--- |
 | **Resourcegroep** | SELab-Wordpress |
 | **Naam databankserver** | dv-wordpressdb |
-| **DNS-naam databankserver** | bv. "ta-wordpressdb.mysql.database.azure.com" <br> *(Terug te vinden op de overzichtspagina in Azure)* |
+| **DNS-naam databankserver** | dv-wordpressdb.mysql.database.azure.com |
 | **Beheerder databankserver** | deyssi |
 | **Wachtwoord databankserver** | KihlEhb@05 |
-| **Naam applicatieserver (Ubuntu)** | bv. "ta-wordpressapp" |
-| **DNS-naam applicatieserver** | bv. "ta-wordpressapp.westeurope.cloudapp.azure.com" <br> *(Terug te vinden op de overzichtspagina in Azure)* |
+| **Naam applicatieserver (Ubuntu)** | dv-wordpressapp |
+| **DNS-naam applicatieserver** | dv-wordpressapp.westeurope.cloudapp.azure.com |
 | **Gebruikersnaam applicatieserver** | deyssi |
 | **Wachtwoord applicatieserver** | KihlEhb@0512 |
-| **WordPress db user** | bv. "wordpress" |
-| **Wachtwoord WordPress db user** | bv. "wordpresspwd" |
+| **WordPress db user** | wordpress |
+| **Wachtwoord WordPress db user** | wordpresspwd |
 | **WordPress user** | admin |
 | **WordPress user password** | Srro@H%E@1iKllIZUj (gegenereerd) |
 
