@@ -82,7 +82,7 @@ Na het vergelijken van docker-compose.yml bestand met een vb. bestand op GitHub 
 
 **Oplossing:** De commentaartekens werden verwijderd zodat de regel actief werd. En daarna opnieuw gestart : `docker compose up -d` en `docker compose ps`.
 
-## Schijf 5 (Silas Pauwels)
+## Schijf 1 (Silas Pauwels)
 ### Probleem 1: Netwerk
 PROBLEEM: geen access tot juist ip adres
 
