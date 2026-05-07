@@ -82,6 +82,34 @@ Na het vergelijken van docker-compose.yml bestand met een vb. bestand op GitHub 
 
 **Oplossing:** De commentaartekens werden verwijderd zodat de regel actief werd. En daarna opnieuw gestart : `docker compose up -d` en `docker compose ps`.
 
+## Schijf 5 (Silas Pauwels)
+### Probleem 1: Netwerk
+PROBLEEM: geen access tot juist ip adres
+OPLOSSING: sudo nano /etc/netplan/01-network-manager-all.yaml
+origineel ip adres: 192.168.56.56/24  --> verandert naar: 192.168.56.20
+sudo netplan apply
+
+### Probleem 2: apache
+PROBLEEM: geen verbinding tot apache
+OPLOSSING: apache2 starten 
+  
+### Probleem 3: MySQL
+PROBLEEM: geen access tot database
+OPLOSSING: SELECT user, host FROM mysql.user; | kijken welke users er bestaan
+wpuser aanmaken
+
+### Probleem 4: Vaultwarden
+PROBLEEM: kon niet connecten op vaultwarden
+OPLOSSING: vaultwarden verander port van 80 -> 4123 | maak env variabele VAULTWARDEN_ADMIN_TOKEN | rocket_tls verander naar /opt/keys/*
+
+
+
+### Probleem 5: Portainer
+PROBLEEM: error met bind mount
+OPLOSSING:in YAML file /data:portainer_data -> portainer_data:/data
+PROBLEEM: failure unauthorized
+OPLOSSING: volume verwijderen en opnieuw laten aanmaken
+
 ---
 
 ## Voorbereiding demo
