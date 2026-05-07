@@ -44,18 +44,26 @@ Omdat de database-poort (3306) dan niet open hoeft te staan voor het publieke in
 
 ## Problemen en oplossingen
 
-### Probleem 1 - WordPress Database Connection Error
+## Schijf 2 (Louis)
+### 1. SSH disabled
+* **Oplossing:** sudo systemctl enable --now ssh
+  
+### 2. Poort 3306 stond dicht
+* **Oplossing:** sudo ufw allow 3306/tcp
+  
+### 3. Hash waarde voor admin password Vaultwarden had enkele dollartekens ipv dubbele dollartekens
+* **Oplossing:** cd ~/docker en dan nano .env en dan ADMIN_TOKEN aanpassen zodat het overal $$ heeft ipv $
+  
+### 4. wordpress config wp ww user en db was fout
 WordPress kon geen verbinding maken met de database omdat het configuratiebestand (`wp-config.php`) foute inloggegevens en een onjuiste databasenaam bevatte.
 * **Oplossing:** Het bestand aangepast zodat het verwijst naar de juiste database `appdb` met de gebruiker `appusr` en het wachtwoord `letmein!`.
 
-### Probleem 2 - SSH-tunnel voor MySQL Workbench
-De database was niet direct bereikbaar vanaf de hostcomputer omdat de bind-address beveiliging alleen lokale verbindingen toeliet.
-* **Oplossing:** In MySQL Workbench de verbindingsmethode aangepast naar `Standard TCP/IP over SSH`, waarbij we eerst inloggen op de VM als gebruiker `trouble` om daarna intern door te verbinden naar de database.
-
-### Probleem 3 - WordPress "Forbidden" melding
-Ondanks dat de bestanden aanwezig waren, negeerde Apache de WordPress-map op poort 8080.
-* **Oplossing:** De eigendomsrechten hersteld met `chown -R www-data:www-data` en de PHP-module voor Apache opnieuw geactiveerd.
-
+### 5. Apache rechten correct gezet voor index.html
+* **Oplossing:** sudo chown -R www-data:www-data /var/www/html
+  
+### Planka: planka credentials waren in commentaar en ww en username waren omgedraait
+* **Oplossing:** cd ~/docker/planka en dan sudo nano docker-compose.yml verwissel wachtwoord en username
+  
 ## Schijf 5 (Deyssi Vedzijeva)
 ### Probleem 1: Netwerk
 Bij het opstarten van de VM was de netwerkinterface eth0 in de DOWN-staat. Via `ip a` en `cat /etc/netplan/*.yaml` heb ik drie fouten gevonden in het netplan-configuratiebestand:
