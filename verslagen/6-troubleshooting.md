@@ -104,13 +104,17 @@ sudo netplan apply
 PROBLEEM: geen verbinding tot apache
 
 OPLOSSING: apache2 starten 
+`sudo systemctl start apache2`
   
 ### Probleem 3: MySQL
 PROBLEEM: geen access tot database
 
-OPLOSSING: SELECT user, host FROM mysql.user; | kijken welke users er bestaan
+OPLOSSING: `SELECT user, host FROM mysql.user;` | kijken welke users er bestaan
 
 wpuser aanmaken
+`CREATE USER 'wpuser'@'192.168.56.20' IDENTIFIED BY 'letmein!';
+GRANT ALL PRIVILEGES ON *.* TO 'wpuser'@'192.168.56.20';
+FLUSH PRIVILEGES;`
 
 ### Probleem 4: Vaultwarden
 PROBLEEM: kon niet connecten op vaultwarden
