@@ -98,7 +98,7 @@ OPLOSSING: sudo nano /etc/netplan/01-network-manager-all.yaml
 
 origineel ip adres: 192.168.56.56/24  --> verandert naar: 192.168.56.20
 
-sudo netplan apply
+`sudo netplan apply`
 
 ### Probleem 2: apache
 PROBLEEM: geen verbinding tot apache
