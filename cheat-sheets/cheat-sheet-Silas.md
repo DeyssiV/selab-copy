@@ -110,6 +110,20 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | docker compose up                | zoek naar docker-compose.yml in huidige map en run die                                                                    |
 | docker compose down              | stop en verwijder containers die gestart zien door docker-compose.yml bestand in huidige map                              |      
 
+## Cisco 
+| **Variabele | **inhoud |
+|------|----------|
+| User EXEC → Privileged EXEC | `enable`                             |
+| Privileged → Config mode    | `configure terminal`                 |
+| Terug naar EXEC mode        | `end`                                |
+| Eén niveau terug            | `exit`                               |
+| IP interfaces + status      | `show ip interface brief`            |
+| IPv4 routing tabel          | `show ip route`                      |
+| DNS lookup uitschakelen     | `no ip domain-lookup`                |
+| Running config opslaan      | `copy running-config startup-config` |
+| Interface activeren         | `no shutdown`                        |
+| Domeinnaam instellen        | `ip domain-name selabs.local`        |
+| Lokale user maken           | `username admin secret cisco123`     |
 
 
 
