@@ -30,7 +30,10 @@ In deze opdracht hebben we geleerd om een klein netwerkje op te zetten in cisco 
 ### Vraag 7 - Hoe kan je de MAC-adressen terugvinden van de interfaces?
 `show interfaces`
 
-### Vraag 8 - Wat is de "SSH timeout" en "maximum authentication retries". Hoe stel ik deze in op 60 seconden en 4 retries?
+### Vraag 8 - Waarom schakelen we telnet uit?
+Telnet is onveilig, want het is niet versleuteld
+
+### Vraag 9 - Wat is de "SSH timeout" en "maximum authentication retries". Hoe stel ik deze in op 60 seconden en 4 retries?
 SSH timeout = hoe lang de router wacht op invoer tijdens een login
 
 maximum authentication retries = hoeveel keer je een fout wachtwoord mag ingeven
