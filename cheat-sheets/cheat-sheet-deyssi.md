@@ -115,6 +115,108 @@
 |Poort & proces check|`sudo ss -tlnp | grep <POORT>`|Controleer op welk IP-adres en poort een service luistert.|
 |Internet testen|`ping -c 3 8.8.8.8`|Stuurt 3 pakketten naar Google DNS om internetverbinding te testen.|
 
+---
+
+## 11. Cisco IOS (gegenereerd)
+
+| Taak | Commando | Toelichting |
+| :--- | :--- | :--- |
+| **CLI modes** | | |
+| User EXEC | `Router>` | Beperkte weergave. Standaard bij opstarten. |
+| Privileged EXEC | `Router#` via `enable` | Volledige weergave + beheer. Geen configuratie. |
+| Global Config | `Router(config)#` via `configure terminal` | Alle globale instellingen van het toestel. |
+| Interface Config | `Router(config-if)#` via `interface g0/0/0` | Instellingen per interface (IP, beschrijving…). |
+| Line Config | `Router(config-line)#` via `line console 0` of `line vty 0 4` | Instellingen voor console/VTY lijnen (SSH, wachtwoord…). |
+| Terugkeren | `exit` | Één niveau terug. |
+| Naar Privileged EXEC | `end` of Ctrl+Z | Direct vanuit elke config-modus. |
+| **Navigatie & shortcuts** | | |
+| Naar Privileged EXEC | `enable` | Vanuit User EXEC. |
+| Terug naar User EXEC | `disable` | Vanuit Privileged EXEC. |
+| Naar Global Config | `configure terminal` / `conf t` | Vanuit Privileged EXEC. |
+| Commando aanvullen | Tab | Automatisch aanvullen. |
+| Lijst commando's | `?` | Alle commando's in huidige modus. |
+| Opties na commando | `show ip int ?` | Toon beschikbare opties. |
+| Vorig commando | pijltje omhoog / Ctrl+P | Geschiedenis doorlopen. |
+| Commando ongedaan maken | `no` voor het commando | Bv. `no shutdown`, `no ip address`. |
+| Show vanuit config modus | `do show run` | Geen `end` nodig om iets te controleren. |
+| Paginering uitschakelen | `terminal length 0` | Geen `--more--` meer bij lange output. |
+| Output filteren | `show run \| include ip` | Filteren op keyword. |
+| Sectie tonen | `show run \| section interface` | Toon alle interface-secties. |
+| Vanaf keyword tonen | `show run \| begin router` | Toon config vanaf "router". |
+| **Basisconfiguratie** | | |
+| Naam instellen | `hostname R1` | Vanuit Global Config. |
+| Wachtwoord privileged EXEC | `enable secret cisco` | Geëncrypteerd (gebruik dit, niet `enable password`). |
+| Alle wachtwoorden encrypteren | `service password-encryption` | Encryteert plaintext-wachtwoorden in de config. |
+| DNS lookups uitschakelen | `no ip domain-lookup` | Voorkomt vastlopen bij typfouten. |
+| MOTD instellen | `banner motd #boodschap#` | Gebruik willekeurig scheidingsteken. |
+| Console wachtwoord | `line console 0` → `password cisco` → `login` | Vraagt om wachtwoord bij consoletoegang. |
+| Sessie timeout | `exec-timeout 5 0` | Timeout na 5 min. `0 0` = nooit. |
+| Log synchroniseren | `logging synchronous` | Voorkomt dat logberichten je typen onderbreken. |
+| Config opslaan | `copy running-config startup-config` of `wr` | Vanuit Privileged EXEC. |
+| Toestel herladen | `reload` | Herstart het toestel. |
+| Startup config wissen | `erase startup-config` | Factory reset. |
+| **IPv4** | | |
+| Interface selecteren | `interface g0/0/0` of `int g0/0/0` | Vanuit Global Config. |
+| IPv4-adres instellen | `ip address 192.168.1.1 255.255.255.0` | Vanuit Interface Config. |
+| Beschrijving instellen | `description LAN to SW1` | Vanuit Interface Config. |
+| Interface activeren | `no shutdown` | Interfaces staan standaard uit op een router. |
+| Interface uitzetten | `shutdown` | Vanuit Interface Config. |
+| IP-adres verwijderen | `no ip address` | Vanuit Interface Config. |
+| Default route | `ip route 0.0.0.0 0.0.0.0 10.0.0.2` | Gateway of last resort via next-hop IP. |
+| Statische route | `ip route 192.168.2.0 255.255.255.0 10.0.0.2` | Naar specifiek netwerk via next-hop IP. |
+| Statische route verwijderen | `no ip route ...` | Zelfde syntax als aanmaken. |
+| **IPv6** | | |
+| IPv6 routing activeren | `ipv6 unicast-routing` | Verplicht op elke router. Vanuit Global Config. |
+| GUA instellen | `ipv6 address 2001:db8:acad:1::1/64` | Vanuit Interface Config. |
+| LLA manueel instellen | `ipv6 address fe80::1 link-local` | Vanuit Interface Config. |
+| SLAAC (autoconfig) | `ipv6 address autoconfig` | Interface maakt zelf een GUA aan. |
+| IPv6 default route | `ipv6 route ::/0 2001:db8:acad:2::2` | Vanuit Global Config. |
+| IPv6 statische route via LLA | `ipv6 route 2001:db8:acad:3::/64 g0/0/1 fe80::2` | Interface verplicht vermelden bij LLA next-hop. |
+| **Routing & routeringstabel** | | |
+| IPv4 routeringstabel | `show ip route` | Vanuit Privileged EXEC. |
+| IPv6 routeringstabel | `show ipv6 route` | Vanuit Privileged EXEC. |
+| C | Connected | Direct verbonden netwerk. |
+| L | Local | IP-adres van de interface zelf (/32 of /128). |
+| S | Static | Handmatig ingestelde route. |
+| S* | Static default | Gateway of last resort. |
+| **SSH** | | |
+| Domeinnaam instellen | `ip domain-name selabs.local` | Verplicht voor RSA-sleutelgeneratie. |
+| RSA-sleutelpaar aanmaken | `crypto key generate rsa` | Kies 2048 bits. |
+| SSH versie 2 forceren | `ip ssh version 2` | |
+| SSH timeout instellen | `ip ssh time-out 60` | In seconden. |
+| Max. inlogpogingen | `ip ssh authentication-retries 4` | |
+| Lokale gebruiker aanmaken | `username admin secret cisco` | |
+| VTY lines selecteren | `line vty 0 4` | 5 gelijktijdige sessies. |
+| Alleen SSH toelaten | `transport input ssh` | Schakelt telnet uit (telnet = plaintext). |
+| Lokale login gebruiken | `login local` | Gebruik lokale gebruikersdatabase bij inloggen. |
+| SSH verbinding maken | `ssh -l admin 192.168.1.1` | Vanuit PC-terminal in Packet Tracer. |
+| SSH via IPv6 | `ssh -l admin 2001:db8::1` | Werkt ook met IPv6-adres. |
+| SSH status bekijken | `show ip ssh` | Versie en status. |
+| Actieve SSH sessies | `show ssh` | |
+| **Show commando's** | | |
+| Huidige config | `show running-config` | Actieve configuratie in RAM. |
+| Opgeslagen config | `show startup-config` | Config in NVRAM. |
+| IOS versie & hardware | `show version` | |
+| Alle interfaces (uitgebreid) | `show interfaces` | Stats, MAC-adres, fouten. |
+| Specifieke interface | `show interfaces g0/0/0` | |
+| IPv4-adressen + status | `show ip interface brief` | Compact overzicht van alle interfaces. |
+| IPv6-adressen + status | `show ipv6 interface brief` | |
+| IPv6 details interface | `show ipv6 interface g0/0/0` | Toont LLA en GUA. |
+| ARP-tabel | `show arp` | IP → MAC mappings. |
+| IPv6 neighbor table | `show ipv6 neighbors` | Equivalent van ARP voor IPv6. |
+| Ping IPv4 | `ping 192.168.1.1` | |
+| Ping IPv6 | `ping 2001:db8::1` | |
+| Traceroute | `traceroute 192.168.1.1` | Route volgen naar doel. |
+| Ingelogde gebruikers | `show users` | |
+| Systeemtijd | `show clock` | |
+| Commandogeschiedenis | `show history` | |
+| **Switch-specifiek** | | |
+| MAC-adrestabel | `show mac address-table` | IP → MAC via switch. |
+| VLAN overzicht | `show vlan brief` | |
+| Management interface | `interface vlan 1` | Voor IP-adres op switch. |
+| Default gateway switch | `ip default-gateway 192.168.1.1` | Switch doet geen routing, enkel gateway instellen. |
+
+
 # Wachtwoordkluis
 
 | **Variabele** | **Inhoud** |
