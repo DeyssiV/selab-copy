@@ -15,25 +15,31 @@ In deze opdracht hebben we geleerd om een klein netwerkje op te zetten in cisco 
 ### Vraag 2 -  Hoe toon je de IOS-versie?
 `show version`
 
-### Vraag 3 -  Hoe toon je de routeringstabel op een Cisco router?
+### Vraag 3 - Waarvoor dient de gateway of last resort in de routeringstabel van een router?
+De gateway of last resort wordt gebruikt wanneer de router geen specifieke route kent naar een bestemming.
+
+### Vraag 4 - Waarom geeft de eerste ping soms een Request timed out foutmelding terwijl de volgende drie wel lukken?
+De router moet eerst het mac adres kennen en dat gebeurt via ARP, maar het kan zijn dat die ARP berekening nog niet klaar is. Dan krijg je request timed out
+
+### Vraag 5 -  Hoe toon je de routeringstabel op een Cisco router?
 `show ip route`
 
-### Vraag 4 - Hoeveel routes zijn aangeduid met C? Wat betekent dit?
+### Vraag 6 - Hoeveel routes zijn aangeduid met C? Wat betekent dit?
 2, Dit zijn de connected routes 1 voor LAN netwerk en 1 voor de verbinding met de andere router
 
-### Vraag 5 - Hoeveel routes zijn aangeduid met L? Wat betekent dit?
+### Vraag 7 - Hoeveel routes zijn aangeduid met L? Wat betekent dit?
 2, een L-route is het exacte IP adres van de interface
 
-### Vraag 6 - Hoe kan je de IP-adressen van de interfaces zien (IPv4 en IPv6) en welke interfaces up of down zijn?
+### Vraag 8 - Hoe kan je de IP-adressen van de interfaces zien (IPv4 en IPv6) en welke interfaces up of down zijn?
 `show ip interface brief`
 
-### Vraag 7 - Hoe kan je de MAC-adressen terugvinden van de interfaces?
+### Vraag 9 - Hoe kan je de MAC-adressen terugvinden van de interfaces?
 `show interfaces`
 
-### Vraag 8 - Waarom schakelen we telnet uit?
+### Vraag 10 - Waarom schakelen we telnet uit?
 Telnet is onveilig, want het is niet versleuteld
 
-### Vraag 9 - Wat is de "SSH timeout" en "maximum authentication retries". Hoe stel ik deze in op 60 seconden en 4 retries?
+### Vraag 11 - Wat is de "SSH timeout" en "maximum authentication retries". Hoe stel ik deze in op 60 seconden en 4 retries?
 SSH timeout = hoe lang de router wacht op invoer tijdens een login
 
 maximum authentication retries = hoeveel keer je een fout wachtwoord mag ingeven
