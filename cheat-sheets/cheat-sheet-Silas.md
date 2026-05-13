@@ -121,7 +121,7 @@ Simpele git workflow voor projecten met een enkele branch en zonder contributors
 | IPv4 routing tabel          | `show ip route`                      |
 | DNS lookup uitschakelen     | `no ip domain-lookup`                |
 | Running config opslaan      | `copy running-config startup-config` |
-| Interface activeren         | `no shutdown`                        |
+| Interface activeren         | `interface g0/0/0` / `no shutdown`   |
 | Domeinnaam instellen        | `ip domain-name selabs.local`        |
 | Lokale user maken           | `username admin secret cisco123`     |
 
